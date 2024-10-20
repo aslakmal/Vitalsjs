@@ -1,3 +1,5 @@
+// can we make payment outside? do you have whatsapp +94776721445 
+
 document.querySelector('#startCharts').addEventListener('click', onRecord);
 //new main.js    
 /*
