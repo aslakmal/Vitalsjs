@@ -1,3 +1,6 @@
+// can we make payment outside? you can pay after works done.do you have whatsapp +94776721445 
+
+
 document.querySelector('#startCharts').addEventListener('click', onRecord);
 //new main.js    
 /*
