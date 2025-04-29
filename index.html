@@ -167,6 +167,7 @@ mjx-line{height: 7px !important;}
 .min_d,.min{color:green}
 .max_d,.max{color:red;}
 .answer_d{color:yellow;}
+#eqs{display:none;}
 </style>
 <noscript>
         <link rel="stylesheet" href="assets/css/noscript.css" />
@@ -498,10 +499,3699 @@ $(document).ready(function() {
         showImage(currentIndex);
     });
 });
+document.getElementById('showascii').addEventListener('click', () => {
+  const element = document.getElementById('eqs');
+  const originalDisplay = element.style.display; // Store the original display style
 
+  element.style.display = 'block'; // Or any other visible display style like 'inline', 'flex', etc.
+
+  html2pdf().from(element).save().finally(() => {
+    element.style.display = originalDisplay; // Revert to the original style
+  });
+});
     </script>
 
-	
+
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+<div id="eqs">
+$$ Cholesterol $$
+
+$$Low Density Lipoprotein Cholesterol$$
+
+$$LDL$$
+
+$$chol-((\frac{TG}{5})+(HDL))$$
+
+$$Chol = Cholesterol (140+\frac{240}{2} \frac{mg}{dL}) = 190$$
+
+$$HDL = High Density Lipoprotein (30+\frac{85}{2} \frac{mg}{dL}) = 57.5$$
+
+$$TG = Triglycerides (60+\frac{130}{2} \frac{mg}{dL}) = 95$$
+
+$$Very Low Density Lipoprotein Cholesterol$$
+
+$$VLDL$$
+
+$$\frac{TG}{5}$$
+
+$$VLDL = Very Low Density Lipoprotein Cholesterol (12+\frac{30}{2} \frac{mg}{dL}) = 21$$
+
+$$TG = Triglycerides (60+\frac{150}{2} \frac{mg}{dL}) = 105$$
+
+$$Non-HDL Cholesterol$$
+
+$$NonHDL-C$$
+
+$$chol-HDL$$
+
+$$NonHDL-C = Non-HDL Cholesterol (110+\frac{155}{2} \frac{mg}{dL}) = 132.5$$
+
+$$Chol = Cholesterol (140+\frac{240}{2} \frac{mg}{dL}) = 190$$
+
+$$HDL = High Density Lipoprotein (30+\frac{85}{2} \frac{mg}{dL}) = 57.5$$
+
+$$Cholesterol : HDL Ratio$$
+
+$$Chol:HDL$$
+
+$$\frac{chol}{HDL}$$
+
+$$Chol:HDL = Cholesterol : HDL Ratio (3+\frac{5}{2} ratio) = 4$$
+
+$$Chol = Cholesterol (140+\frac{240}{2} \frac{mg}{dL}) = 190$$
+
+$$HDL = High Density Lipoprotein (30+\frac{85}{2} \frac{mg}{dL}) = 57.5$$
+
+$$LDL : HDL Ratio$$
+
+$$LDL:HDL$$
+
+$$\frac{LDL}{HDL}$$
+
+$$LDL:HDL = LDL : HDL Ratio (0+\frac{3}{2} ratio) = 1.5$$
+
+$$Chol = Cholesterol (140+\frac{240}{2} \frac{mg}{dL}) = 190$$
+
+$$HDL = High Density Lipoprotein (30+\frac{85}{2} \frac{mg}{dL}) = 57.5$$
+
+$$TG = Triglycerides (60+\frac{150}{2} \frac{mg}{dL}) = 105$$
+
+$$ Calcium $$
+
+$$Calcium Correction$$
+
+$$Ca++_c$$
+
+$$Ca++(1*(4.0-alb))$$
+
+$$Ca++_c = Calcium Correction (80.5+\frac{10.5}{2} \frac{mg}{dL}) = 45.5$$
+
+$$Ca++ = Calcium (8.5+\frac{10.5}{2} \frac{mg}{dL}) = 9.5$$
+
+$$Alb = Albumin (3.5+\frac{5.5}{2} \frac{g}{dL}) = 4.5$$
+
+$$Calcium - Albumin Correction$$
+
+$$CaALb_c$$
+
+$$Ca+(0.8*(4.0-alb))$$
+
+$$CaALb_c = Calcium - Albumin Correction (8.5+\frac{10.5}{2} \frac{mg}{dL}) = 9.5$$
+
+$$Ca++ = Calcium (8.5+\frac{10.5}{2} \frac{mg}{dL}) = 9.5$$
+
+$$Alb = Albumin (3.5+\frac{5.5}{2} \frac{g}{dL}) = 4.5$$
+
+$$Calcium - Globulin Correction$$
+
+$$CaGlob_c$$
+
+$$Ca+(0.16*(glob-3.5))$$
+
+$$CaGlob_c = Calcium - Globulin Correction (8.5+\frac{10.5}{2} \frac{mg}{dL}) = 9.5$$
+
+$$Ca++ = Calcium (8.5+\frac{10.5}{2} \frac{mg}{dL}) = 9.5$$
+
+$$Glob = Globulin (2+\frac{3.5}{2} \frac{g}{dL}) = 2.75$$
+
+$$Calcium - pH Correction$$
+
+$$CapH_c$$
+
+$$Ca+(0.12*((pH-7.4)/0.1))$$
+
+$$CapH_c = Calcium - pH Correction (8.5+\frac{10.5}{2}-7.36+\frac{7.44}{2} \frac{mg}{dL}) = 9.5$$
+
+$$Ca++ = Calcium (8.5+\frac{10.5}{2} \frac{mg}{dL}) = 9.5$$
+
+$$pH (7.36+\frac{7.44}{2} pH units) = 7.4$$
+
+$$Calcium, Protein bound$$
+
+$$Ca++_pb$$
+
+$$(alb*8)+(glob*2)+3$$
+
+$$Ca++_pb = Calcium, Protein bound (%)$$
+
+$$Alb = Albumin (3.5+\frac{5.5}{2} \frac{g}{dL}) = 4.5$$
+
+$$Glob = Globulin (2+\frac{3.5}{2} \frac{g}{dL}) = 2.75$$
+
+$$Insulin$$
+
+$$Insulin : Glucose ratio$$
+
+$$Ins:Glu$$
+
+$$\frac{insulin}{glucose}$$
+
+$$Ins:Glu = Insulin : Glucose ratio (0+\frac{0.4}{2} ratio) = 0.2$$
+
+$$Insulin (6+\frac{24}{2} \frac{uU}{mL}) = 15$$
+
+$$gluc = Glucose (75+\frac{115}{2} \frac{mg}{dL}) = 95$$
+
+$$Glucose (estimated average)$$
+
+$$eaGluc$$
+
+$$eaGluc = (28.7 * HbA1c) - 46.7$$
+
+$$eaGluc = Glucose (estimated average) (75+\frac{110}{2}, \frac{mg}{dL}) = 92.5$$
+
+$$HbA1c = Hemoglobin A1c (4.5+\frac{6.5}{2} %) = 5.5$$
+
+$$ Gastrointestinal $$
+
+$$Serum:Ascites Albumin Ratio$$
+
+$$SAAG$$
+
+$$albS-albAsc$$
+
+$$SAAG = Serum:Ascites Albumin Ratio (0+\frac{1.1}{2} \frac{g}{dL}) = 0.55$$
+
+$$Alb = Albumin (3.5+\frac{5.5}{2} \frac{g}{dL}) = 4.5$$
+
+$$Alb = Albumin Asc (0+\frac{2.5}{2} \frac{g}{dL}) = 1.25$$
+
+$$Maddrey Discriminant Function$$
+
+$$Maddrey DiscFx$$
+
+$$((PTpt-PTctrl)*4.6)+bilirubin$$
+
+$$Maddrey DiscFx = Maddrey Discriminant Function (0.8+\frac{10}{2} arbitrary) = 5.4$$
+
+$$PT (Pt) = Prothrombin Time (Patient) (11+\frac{15}{2} s) = 13$$
+
+$$PT (ctrl) = Prothrombin Time (control) (11+\frac{15}{2} s) = 13$$
+
+$$T Bili = Bilirubin, total (0.3+\frac{1}{2} \frac{mg}{dL}) = 0.65$$
+
+$$AST:ALT Ratio$$
+
+$$AST:ALT_r$$
+
+$$\frac{AST}{ALT}$$
+
+$$AST:ALT_R = AST:ALT Ratio (0.8+\frac{1.2}{2} ratio) = 1$$
+
+$$AST = Aspartate aminotransferase (0+\frac{35}{2} \frac{U}{L}) = 17.5$$
+
+$$ALT = Alanine aminotransferase (0+\frac{35}{2} \frac{U}{L}) = 17.5$$
+
+$$Model for End-stage Liver Disease - UNOS$$
+
+$$MELD-unos$$
+
+$${[(0.957*Ln Cr)+(0.378*Ln bili)+(1.12*Ln INR)]+0.643}*10$$
+
+$$MELD-unos = Model for End-stage Liver Disease - UNOS (6+\frac{10}{2} score) = 8$$
+
+$$Cr = Creatinine (0.5+\frac{1.5}{2} \frac{mg}{dL}) = 1$$
+
+$$T Bili = Bilirubin, total (0.3+\frac{1}{2} \frac{mg}{dL}) = 0.65$$
+
+$$INR = International Normalized Ratio (0.8+\frac{1.2}{2} ratio) = 1$$
+
+$$Entries < 1.0 are set to 1.0 for the purposes of the MELD score calculation.$$
+
+$$Ln = natural logarithm.$$
+
+$$Model for End-stage Liver Disease - Na$$
+
+$$MELD-Na$$
+
+$$MELD - Na - (0.025*MELD*(140-Na)) +140$$
+
+$$MELD-unos = Model for End-stage Liver Disease - UNOS (6+\frac{10}{2} score) = 8$$
+
+$$Cr = Creatinine (0.5+\frac{1.5}{2} \frac{mg}{dL}) = 1$$
+
+$$T Bili = Bilirubin, total (0.3+\frac{1}{2} \frac{mg}{dL}) = 0.65$$
+
+$$INR = International Normalized Ratio (0.8+\frac{1.2}{2} ratio) = 1$$
+
+$$Entries < 1.0 are set to 1.0 for the purposes of the MELD score calculation.$$
+
+$$Ln = natural logarithm.$$
+
+$$Pediatric End-stage Liver Disease$$
+
+$$PELD$$
+
+$${[ (0.480*Ln bili)+(1.857*Ln INR)-(0.687*Ln alb)+(0.436 if age <1y)+(0.667 if growth delay)} *10$$
+
+$$PELD = Pediatric End-stage Liver Disease (-8+\frac{0}{2} score) = -4$$
+
+$$Age = Patient Age (0<90 years) = 45$$
+
+$$T Bili = Bilirubin, total (0.3+\frac{1}{2} \frac{mg}{dL}) = 0.65$$
+
+$$Alb = Albumin (3.5+\frac{5.5}{2} \frac{g}{dL}) = 4.5$$
+
+$$INR = International Normalized Ratio (0.8+\frac{1.2}{2} ratio) = 1$$
+
+$$ Pancreas $$
+
+$$Creatinine:Amylase Cl Ratio$$
+
+$$CrAmCl_r$$
+
+$$(\frac{U}{Pamylase}*\frac{U}{PCr})*100$$
+
+$$CrAmCl_ = Creatinine:Amylase Cl Ratio (1+\frac{5}{2} %) = 3$$
+
+$$Amylase (60+\frac{180}{2} \frac{U}{L}) = 120$$
+
+$$Amylase (4+\frac{400}{2} \frac{U}{L}) = 202$$
+
+$$Cr = Creatinine S (0.5+\frac{1.5}{2} \frac{mg}{dL}) = 1$$
+
+$$Cr = Creatinine U (40+\frac{120}{2} \frac{mg}{dL}) = 80$$
+
+$$ Intestinal $$
+
+$$Stool Osmolal Gap$$
+
+$$SOG$$
+
+$$Osm-2*(Na+K)$$
+
+$$OsmF = Stool Osmolality (290+\frac{375}{2} \frac{mOsm}{kg}) = 332.5$$
+
+$$SOG = Stool Osmolal Gap (0+\frac{100}{2} \frac{mOsm}{kg}) = 50$$
+
+$$Osm Stl = Osmolality (290+\frac{375}{2} \frac{mOsm}{kg}) = 332.5$$
+
+$$Na+ = Sodium (30+\frac{34}{2} \frac{mEq}{L}) = 32$$
+
+$$K+ = Potassium (60+\frac{90}{2} \frac{mEq}{L}) = 75$$
+
+$$Stool Osmolality$$
+
+$$OsmF$$
+
+$$2*(Na+K)$$
+
+$$OsmF = Stool Osmolality (290+\frac{375}{2} \frac{mOsm}{kg}) = 332.5$$
+
+$$Na+ = Sodium (30+\frac{34}{2} \frac{mEq}{L}) = 32$$
+
+$$K+ = Potassium (60+\frac{90}{2} \frac{mEq}{L}) = 75$$
+
+$$ Hematology-Oncology $$
+
+$$Mean Corpuscular Volume$$
+
+$$MCV$$
+
+$$\frac{Hct}{RBC}$$
+
+$$MCV = Mean Corpuscular Volume (83+\frac{97}{2} fL) = 90$$
+
+$$Hct = Hematocrit (37+\frac{52}{2} %) = 44.5$$
+
+$$RBCs = Red Blood Cells (4.2+\frac{6.3}{2} cells*106/ mm3) = 5.25$$
+
+$$*equation adjusts units multiplying Hct by 10.$$
+
+$$Cell equivalents: cells*\frac{106}{mm3} = cells*\frac{1012}{L}$$
+
+$$Mean Corpuscular Hemoglobin$$
+
+$$MCH$$
+
+$$\frac{Hb}{RBC}$$
+
+$$MCH = Mean Corpuscular Hemoglobin (27+\frac{31}{2} \frac{pg}{cell}) = 29$$
+
+$$Hb = Hemoglobin (12+\frac{18}{2} \frac{g}{dL}) = 15$$
+
+$$RBCs = Red Blood Cells (4.2+\frac{6.3}{2} cells*106/ mm3) = 5.25$$
+
+$$*equation adjusts units multiplying Hb by 10.$$
+
+$$Cell equivalents: cells*\frac{106}{mm3} = cells*\frac{1012}{L}$$
+
+$$Mean Corpuscular Hemoglobin Concentration$$
+
+$$MCHC$$
+
+$$\frac{Hb}{Hct}$$
+
+$$MCHC = Mean Corpuscular Hemoglobin Concentration (32+\frac{36}{2} \frac{g}{dL}) = 34$$
+
+$$Hb = Hemoglobin (12+\frac{18}{2} \frac{g}{dL}) = 15$$
+
+$$Hct = Hematocrit (37+\frac{52}{2} %) = 44.5$$
+
+$$ Reticulocytes $$
+
+$$Absolute Reticulocyte Count$$
+
+$$ARC$$
+
+$$(\frac{retis}{100})*RBC$$
+
+$$ARC = Absolute Reticulocyte Count (21000+\frac{94500}{2} \frac{cells}{mm3}) = 58500$$
+
+$$retis = Reticulocytes (0+\frac{500}{2} %) = 250$$
+
+$$RBCs = Red Blood Cells (0+\frac{5000}{2} cells*106/ mm3) = 2500$$
+
+$$Reticulocyte %$$
+
+$$Retic%$$
+
+$$(\frac{retis}{RBC})*100$$
+
+$$Retic% = Reticulocyte % (0.5+\frac{1.5}{2} %) = 1$$
+
+$$retis = Reticulocytes (0+\frac{500}{2} \frac{cells}{field}) = 250$$
+
+$$RBCs = Red Blood Cells (0+\frac{5000}{2} \frac{cells}{field}) = 2500$$
+
+$$*Reticulocyte % is the No. of reticulocytes as a % of the total RBC (erythrocytes).$$
+
+$$Reticulocyte Count, Corrected$$
+
+$$Retic_c$$
+
+$$retis*(Hct \frac{pt}{Hct} nl)$$
+
+$$Retic_c = Reticulocyte Count, Corrected (0.5+\frac{1.5}{2} %) = 1$$
+
+$$retis = Reticulocytes (0.5+\frac{1.5}{2} %) = 1$$
+
+$$Hct (Pt) = Hematocrit (Patient) (37+\frac{52}{2} %) = 44.5$$
+
+$$Hct (nl) = Hematocrit (normal) (37+\frac{52}{2} %) = 44.5$$
+
+$$ White Blood Cells $$
+
+$$Absolute Neutrophil Count$$
+
+$$ANC$$
+
+$$WBC*((PMN+bands)/100)$$
+
+$$ANC = Absolute Neutrophil Count (1520+\frac{6370}{2} \frac{cells}{mm3}) = 3945$$
+
+$$WBCs = White Blood Cells (3800+\frac{9800}{2} \frac{cells}{mm3}) = 6800$$
+
+$$PMN = Polymorphonuclear cells (41+\frac{74}{2} %) = 57.5$$
+
+$$bands = (0+\frac{4}{2} %) = 2$$
+
+$$ Iron $$
+
+$$Iron Deficit$$
+
+$$Fe_def$$
+
+$$Wt*(15-Hb)+1000$$
+
+$$Fe_def = Iron Deficit (0+\frac{0}{0} mg)$$
+
+$$Wt = Body Weight (110+\frac{220}{2} kg) = 165$$
+
+$$Hb = Hemoglobin (12+\frac{18}{2} \frac{g}{dL}) = 15$$
+
+$$*If Hb is >= \frac{15g}{dL}, result defaults to 0.$$
+
+$$Transferrin$$
+
+$$TransFe$$
+
+$$(0.8*TIBC)-43$$
+
+$$TransFe = Transferrin (220+\frac{400}{2} \frac{mg}{dL}) = 310$$
+
+$$TIBC = Total Iron Binding Capacity (273+\frac{337}{2} Âµ\frac{g}{dL}) = 305$$
+
+$$*If TIBC is <= 53.75 \frac{mg}{dL}, result defaults to 0.$$
+
+$$ Cardiology $$
+
+$$ Hemodynamics $$
+
+$$Cardiac Output (Physiologic)$$
+
+$$CO_phys$$
+
+$$HR*SV$$
+
+$$CO_phys = Cardiac Output (Physiologic) (4.25+\frac{6.12}{2} \frac{L}{min}) = 5.185$$
+
+$$HR = Heart Rate (60+\frac{90}{2} bpm) = 75$$
+
+$$SV = Stroke Volume (69+\frac{87}{2} \frac{mL}{beat}) = 78$$
+
+$$*CO result in \frac{mL}{min} is divided by 1000 to adjust units to \frac{L}{min}.$$
+
+$$**CO is the amount of blood pumped by the heart per minute.$$
+
+$$Cardiac Output (Fick)$$
+
+$$CO_fick$$
+
+$$\frac{VO2}{Ca}-vO2$$
+
+$$CO_fick = Cardiac Output (Fick) (4.25+\frac{6.12}{2} \frac{L}{min}) = 5.185$$
+
+$$VO2 = Oxygen Consumption (200+\frac{280}{2} \frac{mL}{min}) = 240$$
+
+$$C(a-v)O2 = a-v Oxygen Content Difference (4.0+\frac{5.0}{2} \frac{mL}{dL}) = 4.5$$
+
+$$*C(a-v)O2 is multiplied by 10 to adjust \frac{mL}{dL} to \frac{mL}{L}.$$
+
+$$**CO is the amount of blood pumped by the heart per minute.$$
+
+$$Cardiac Index$$
+
+$$CI$$
+
+$$\frac{CO}{BSA}$$
+
+$$CI = Cardiac Index (2.5+\frac{3.6}{2} \frac{L}{min}/m2) = 3.05$$
+
+$$CO = Cardiac Output (4.25+\frac{6.12}{2} \frac{L}{min}) = 5.185$$
+
+$$BSA = Body Surface Area (1.3+\frac{2.5}{2} m2) = 1.9$$
+
+$$**CI is the cardiac output indexed to BSA.$$
+
+$$Ejection Fraction$$
+
+$$EF$$
+
+$$\frac{SI}{EDV}$$
+
+$$EF = Ejection Fraction (55+\frac{78}{2} fraction) = 66.5$$
+
+$$SI = Stroke Index (41+\frac{60}{2} \frac{mL}{beat}/m2) = 50.5$$
+
+$$EDV = End-Diastolic Volume (60+\frac{90}{2} \frac{mL}{m2}) = 75$$
+
+$$Heart Rate$$
+
+$$HR$$
+
+$$\frac{CO}{SV}$$
+
+$$HR = Heart Rate (60+\frac{90}{2} bpm) = 75$$
+
+$$CO = Cardiac Output (4.25+\frac{6.12}{2} \frac{mL}{min}) = 5.185$$
+
+$$SV = Stroke Volume (69+\frac{87}{2} \frac{mL}{beat}) = 78$$
+
+$$*The CO input is in \frac{mL}{min} (or \frac{L}{min} multiplied by 1000 to adjust units to \frac{mL}{min}).$$
+
+$$Maximum Heart Rate$$
+
+$$HR_m$$
+
+$$(220-age)$$
+
+$$HR_m = Maximum Heart Rate (130+\frac{202}{2} bpm) = 166$$
+
+$$Age = Patient Age (0+\frac{90}{2} years) = 45$$
+
+$$Target Heart Rate$$
+
+$$HR_t$$
+
+$$(220-age)*0.7$$
+
+$$HR_t = Target Heart Rate (91+\frac{141}{2} bpm) = 116$$
+
+$$Age = Patient Age (0+\frac{90}{2} years) = 45$$
+
+$$Heart Rate (intrinsic)$$
+
+$$HR_i$$
+
+$$118.1-(0.57*age)$$
+
+$$HR_i = Heart Rate (intrinsic) (60+\frac{90}{2} bpm) = 75$$
+
+$$Age = Patient Age (0+\frac{90}{2} years) = 45$$
+
+$$Stroke Volume$$
+
+$$SV$$
+
+$$\frac{CO}{HR}$$
+
+$$SV = Stroke Volume (69+\frac{87}{2} \frac{mL}{beat}) = 78$$
+
+$$CO = Cardiac Output (4.25+\frac{6.12}{2} \frac{mL}{min}) = 5.19$$
+
+$$HR = Heart Rate (60+\frac{90}{2} bpm) = 75$$
+
+$$*The CO input is in \frac{mL}{min} (or \frac{L}{min} multiplied by 1000 to adjust units to \frac{mL}{min}).$$
+
+$$**SV is the amount of blood pumped by the heart with each beat; Also: SV = EDV - ESV.$$
+
+$$Stroke Volume Index$$
+
+$$SI$$
+
+$$\frac{CI}{HR}$$
+
+$$SI = Stroke Volume Index (41+\frac{60}{2} \frac{mL}{beat}/m2) = 50.5$$
+
+$$CI = Cardiac Index (2.5+\frac{3.6}{2} \frac{mL}{min}/m2) = 3.05$$
+
+$$HR = Heart Rate (60+\frac{90}{2} bpm) = 75$$
+
+$$*The CI input is in \frac{mL}{min}/m2 (or \frac{L}{min}/m2 multiplied by 1000 to adjust units to \frac{mL}{min}/m2).$$
+
+$$**SI is the SV indexed to BSA$$
+
+$$Blood Flow:Volume Ratio$$
+
+$$BFVR$$
+
+$$\frac{CI}{BVI}$$
+
+$$BFVR = Blood Flow:Volume Ratio (0.9+\frac{1.4}{2} ratio) = 1.15$$
+
+$$CI = Cardiac Index (2.5+\frac{3.6}{2} \frac{L}{min}/m2) = 3.05$$
+
+$$BVI = Blood Volume Index (2+\frac{3}{2} \frac{L}{m2}) = 2.5$$
+
+$$Blood Volume$$
+
+$$BV$$
+
+$$PV/(1-Hct)$$
+
+$$BV = Blood Volume (3+\frac{5.1}{2} L) = 4.05$$
+
+$$PV = Plasma Volume (1.6+\frac{4.8}{2} L) = 3.2$$
+
+$$Hct = Hematocrit (37+\frac{52}{2} %) = 44.5 %$$
+
+$$*Hct is divided by 100 to adjust units to fraction.$$
+
+$$Hct units: \frac{mL}{dL} is equivalent to % terms.$$
+
+$$Blood Volume Index$$
+
+$$BVI$$
+
+$$PV/((1-Hct)*BSA)$$
+
+$$BVI = Blood Volume Index (2+\frac{3}{2} \frac{L}{m2}) = 2.5$$
+
+$$BSA = Body Surface Area (1.3+\frac{2.5}{2} m2) = 1.9$$
+
+$$PV = Plasma Volume (1.6+\frac{4.8}{2} L) = 3.2$$
+
+$$Hct = Hematocrit (60+\frac{80}{2} %) = 70 %$$
+
+$$Wt = Body Weight (110+\frac{220}{2} kg) = 165 kg$$
+
+$$Ht = Body Height (60+\frac{80}{2} cm) = 70 cm$$
+
+$$*Hct is divided by 100 to adjust units to fraction.$$
+
+$$Hct units: \frac{mL}{dL} is equivalent to % terms.$$
+
+$$Central Blood Volume Index$$
+
+$$CBVI$$
+
+$$MTT*CI*16.7$$
+
+$$CBVI = Central Blood Volume Index (744+\frac{916}{2} \frac{mL}{m2}) = 830 \frac{mL}{m2}$$
+
+$$CI = Cardiac Index (2.5+\frac{3.6}{2} \frac{L}{min}/m2) = 3.05 \frac{L}{min}/m2$$
+
+$$MTT = Mean Transit Time (14.6+\frac{16.4}{2} s) = 15.5 s$$
+
+$$ Pressures $$
+
+$$Mean Arterial Pressure$$
+
+$$MAP$$
+
+$$(SP + 2DP) / 3$$
+
+$$MAP = Mean Arterial Pressure (70+\frac{105}{2} mmHg) = 87.5 mmHg$$
+
+$$SBP = Systolic Blood Pressure (100+\frac{140}{2} mmHg) = 120 mmHg$$
+
+$$DBP = Diastolic Blood Pressure (60+\frac{90}{2} mmHg) = 75 mmHg$$
+
+$$SP must be >= DP.$$
+
+$$Also: MAP = [0.33(PP)] + DP; and$$
+
+$$MAP = [0.33(SP - DP)] + DP$$
+
+$$Mean Pulmonary Arterial Pressure$$
+
+$$MPAP$$
+
+$$(PSP + 2PDP) / 3$$
+
+$$MPAP = Mean Pulmonary Arterial Pressure (9+\frac{17}{2} mmHg) = 13 mmHg$$
+
+$$PASP = Pulmonary Artery Systolic Pressure (15+\frac{30}{2} mmHg) = 22.5 mmHg$$
+
+$$PADP = Pulmonary Artery Diastolic Pressure (5+\frac{13}{2} mmHg) = 9 mmHg$$
+
+$$PASP must be >= PADP.$$
+
+$$Also: MPAP = [0.33(PSP - PDP)] + PDP$$
+
+$$Pulse Pressure$$
+
+$$PP$$
+
+$$SP - DP$$
+
+$$PP = Pulse Pressure (20+\frac{70}{2} mmHg) = 45 mmHg$$
+
+$$SBP = Systolic Blood Pressure (100+\frac{140}{2} mmHg) = 120 mmHg$$
+
+$$DBP = Diastolic Blood Pressure (60+\frac{90}{2} mmHg) = 75 mmHg$$
+
+$$Also: PP = (MAP - DP) / 0.33$$
+
+$$Rate Pressure Product$$
+
+$$RPP$$
+
+$$HR * SP$$
+
+$$RPP = Rate Pressure Product (6000+\frac{12000}{2} mmHg*bpm) = 9000 mmHg*bpm$$
+
+$$HR = Heart Rate (60+\frac{90}{2} bpm) = 75 bpm$$
+
+$$SBP = Systolic Blood Pressure (100+\frac{140}{2} mmHg) = 120 mmHg$$
+
+$$Coronary Perfusion Pressure$$
+
+$$CPP$$
+
+$$DP - PCWP$$
+
+$$CPP = Coronary Perfusion Pressure (60+\frac{80}{2} mmHg) = 70 mmHg$$
+
+$$DBP = Diastolic Blood Pressure (60+\frac{90}{2} mmHg) = 75 mmHg$$
+
+$$PCWP = Pulmonary Capillary Wedge Pressure (2+\frac{12}{2} mmHg) = 7 mmHg$$
+
+$$**PCWP is also referred to as PAoP (Pulmonary artery occlusive pressure).$$
+
+$$Colloid-Oncotic Pressure$$
+
+$$COP$$
+
+$$(glob * 1.4) + (alb * 5.5)$$
+
+$$Colloid-Oncotic Pressure (23+\frac{29}{2} mmHg) = 26 mmHg$$
+
+$$Glob = Globulin (2+\frac{3.5}{2} \frac{g}{dL}) = 2.75 \frac{g}{dL}$$
+
+$$Alb = Albumin (3.5+\frac{5.5}{2} \frac{g}{dL}) = 4.5 \frac{g}{dL}$$
+
+$$Ankle Brachial Index$$
+
+$$ABI$$
+
+$$(ankle SP / brachial SP)$$
+
+$$ABI = Ankle Brachial Index (1+\frac{1.1}{2} ratio) = 1.05$$
+
+$$ankle SP = Ankle Systolic Pressure (100+\frac{140}{2} mmHg) = 120 mmHg$$
+
+$$brachial SP = Brachial Systolic Pressure (100+\frac{140}{2} mmHg) = 120 mmHg$$
+
+$$*The higher reading of both arms and legs is used.$$
+
+$$ Resistance $$
+
+$$Systemic Vascular Resistance$$
+
+$$SVR$$
+
+$$((MAP - CVP) * 79.92) / CO$$
+
+$$SVR = Systemic Vascular Resistance (770+\frac{1500}{2} dynÂ·\frac{s}{cm5}) = 1135 dynÂ·\frac{s}{cm5}$$
+
+$$MAP = Mean Arterial Pressure (70+\frac{105}{2} mmHg) = 87.5 mmHg$$
+
+$$CVP = Central Venous Pressure (1+\frac{7}{2} mmHg) = 4 mmHg$$
+
+$$CO = Cardiac Output (4.25+\frac{6.12}{2} \frac{L}{min}) = 5.19 \frac{L}{min}$$
+
+$$*79.92 is a conversion term to equalize units.$$
+
+$$*CVP must be < MAP.$$
+
+$$(may use Right Atrial Pressure in lieu of CVP).$$
+
+$$In general, SVR = MAP / CO$$
+
+$$Systemic Vascular Resistance Index$$
+
+$$SVRI$$
+
+$$((MAP - CVP) * 79.92) / CI$$
+
+$$SVRI = Systemic Vascular Resistance Index (1970+\frac{2390}{2} dynÂ·\frac{s}{cm5}Â·m2) = 2130 dynÂ·\frac{s}{cm5}Â·m2$$
+
+$$MAP = Mean Arterial Pressure (70+\frac{105}{2} mmHg) = 87.5 mmHg$$
+
+$$CVP = Central Venous Pressure (1+\frac{7}{2} mmHg) = 4 mmHg$$
+
+$$CI = Cardiac Index (2.5+\frac{3.6}{2} \frac{L}{min}/m2) = 3.05 \frac{L}{min}/m2$$
+
+$$*79.92 is a conversion term to equalize units.$$
+
+$$*CVP must be < MAP.$$
+
+$$(may use Right Atrial Pressure in lieu of CVP).$$
+
+$$In general, SVRI = MAP / CI$$
+
+$$Pulmonary Vascular Resistance$$
+
+$$PVR$$
+
+$$((MPAP - WP) * 79.92) / CO$$
+
+$$PVR = Pulmonary Vascular Resistance (20+\frac{120}{2} dynÂ·\frac{s}{cm5}) = 70 dynÂ·\frac{s}{cm5}$$
+
+$$MPAP = Mean Pulmonary Arterial Pressure (9+\frac{17}{2} mmHg) = 13 mmHg$$
+
+$$PCWP = Pulmonary Capillary Wedge Pressure (2+\frac{12}{2} mmHg) = 7 mmHg$$
+
+$$CO = Cardiac Output (4.5+\frac{6.12}{2} \frac{L}{min}) = 5.31 \frac{L}{min}$$
+
+$$*79.92 is a conversion term to equalize units.$$
+
+$$*PCWP can't be > MPAP.$$
+
+$$In general, PVR = MPAP / CO$$
+
+$$Pulmonary Vascular Resistance Index$$
+
+$$PVRI$$
+
+$$((MPAP - WP) * 79.92) / CI$$
+
+$$PVRI = Pulmonary Vascular Resistance Index (30+\frac{240}{2} dynÂ·\frac{s}{cm5}Â·m2) = 135 dynÂ·\frac{s}{cm5}Â·m2$$
+
+$$MPAP = Mean Pulmonary Arterial Pressure (9+\frac{17}{2} mmHg) = 13 mmHg$$
+
+$$PCWP = Pulmonary Capillary Wedge Pressure (2+\frac{12}{2} mmHg) = 7 mmHg$$
+
+$$CI = Cardiac Index (2.5+\frac{3.6}{2} \frac{L}{min}/m2) = 3.05 \frac{L}{min}/m2$$
+
+$$*79.92 is a conversion term to equalize units.$$
+
+$$*PCWP can't be > MPAP.$$
+
+$$In general, PVRI = MPAP / CI$$
+
+$$ Cardiac Work $$
+
+$$Cardiac Work, Left$$
+
+$$LCW$$
+
+$$CO * MAP * 0.0144$$
+
+$$LCW = Cardiac Work, Left (5.1 + \frac{9.45}{2} kgÂ·m) = 7.275 kgÂ·m$$
+
+$$CO = Cardiac Output (4.25 + \frac{6.12}{2} \frac{L}{min}) = 5.19 \frac{L}{min}$$
+
+$$MAP = Mean Arterial Pressure (70 + \frac{105}{2} mmHg) = 87.5 mmHg$$
+
+$$*0.0144 is a conversion term to equalize units.$$
+
+$$Also: LCW = LCWI * BSA$$
+
+$$Cardiac Work Index, Left$$
+
+$$LCWI$$
+
+$$CI * MAP * 0.0144$$
+
+$$LCWI = Cardiac Work Index, Left (3.4 + \frac{4.2}{2} kgÂ·\frac{m}{m2}) = 3.8 kgÂ·\frac{m}{m2}$$
+
+$$CI = Cardiac Index (2.5 + \frac{3.6}{2} \frac{L}{min}/m2) = 3.05 \frac{L}{min}/m2$$
+
+$$MAP = Mean Arterial Pressure (70 + \frac{105}{2} mmHg) = 87.5 mmHg$$
+
+$$*0.0144 is a conversion term to equalize units.$$
+
+$$Also: LCWI = (CO / BSA) * MAP * 0.0144$$
+
+$$Cardiac Work, Right$$
+
+$$RCW$$
+
+$$CO * MPAP * 0.0144$$
+
+$$RCW = Cardiac Work, Right (810 + \frac{1485}{2} gÂ·m) = 1147.5 gÂ·m$$
+
+$$CO = Cardiac Output (4.25 + \frac{6.12}{2} \frac{L}{min}) = 5.19 \frac{L}{min}$$
+
+$$MPAP = Mean Pulmonary Arterial Pressure (9 + \frac{17}{2} mmHg) = 13 mmHg$$
+
+$$*0.0144 is a conversion term to equalize units.$$
+
+$$Also: RCW = RCWI * BSA$$
+
+$$Cardiac Work Index, Right$$
+
+$$RCWI$$
+
+$$CI * MPAP * 0.0144$$
+
+$$RCWI = Cardiac Work Index, Right (540 + \frac{660}{2} gÂ·\frac{m}{m2}) = 600 gÂ·\frac{m}{m2}$$
+
+$$CI = Cardiac Index (2.5 + \frac{3.6}{2} \frac{L}{min}/m2) = 3.05 \frac{L}{min}/m2$$
+
+$$MPAP = Mean Pulmonary Arterial Pressure (9 + \frac{17}{2} mmHg) = 13 mmHg$$
+
+$$*0.0144 is a conversion term to equalize units.$$
+
+$$Also: RCWI = (CO / BSA) * MPAP * 0.0144$$
+
+$$Ventricular Stroke Work, Left$$
+
+$$LVSW$$
+
+$$SV * MAP * 0.0144$$
+
+$$LVSW = Ventricular Stroke Work, Left (75 + \frac{139}{2} gÂ·m) = 107 gÂ·m$$
+
+$$SV = Stroke Volume (69 + \frac{87}{2} \frac{mL}{beat}) = 78 \frac{mL}{beat}$$
+
+$$MAP = Mean Arterial Pressure (70 + \frac{105}{2} mmHg) = 87.5 mmHg$$
+
+$$*0.0144 is a conversion term to equalize units.$$
+
+$$Also: LVSW = LVSWI * BSA$$
+
+$$Ventricular Stroke Work Index, Left$$
+
+$$LVSWI$$
+
+$$SI * MAP * 0.0144$$
+
+$$LVSW = Ventricular Stroke Work, Left (75 + \frac{139}{2} gÂ·m) = 107 gÂ·m$$
+
+$$SV = Stroke Volume (69 + \frac{87}{2} \frac{mL}{beat}) = 78 \frac{mL}{beat}$$
+
+$$MAP = Mean Arterial Pressure (70 + \frac{105}{2} mmHg) = 87.5 mmHg$$
+
+$$*0.0144 is a conversion term to equalize units.$$
+
+$$Also: LVSW = LVSWI * BSA$$
+
+$$Ventricular Stroke Work, Right$$
+
+$$RVSW$$
+
+$$SV * MPAP * 0.0144$$
+
+$$RVSW = Ventricular Stroke Work, Right (11.8 + \frac{21.8}{2} gÂ·m) = 16.8 gÂ·m$$
+
+$$SV = Stroke Volume (69 + \frac{87}{2} \frac{mL}{beat}) = 78 \frac{mL}{beat}$$
+
+$$MPAP = Mean Pulmonary Arterial Pressure (9 + \frac{17}{2} mmHg) = 13 mmHg$$
+
+$$*0.0144 is a conversion term to equalize units.$$
+
+$$Also: RVSW = RVSWI * BSA$$
+
+$$Ventricular Stroke Work Index, Right$$
+
+$$RVSWI$$
+
+$$SI * MPAP * 0.0144$$
+
+$$RVSWI = Ventricular Stroke Work Index, Right (7.9 + \frac{9.7}{2} gÂ·\frac{m}{m2}) = 8.8 gÂ·\frac{m}{m2}$$
+
+$$SI = Stroke Index (41 + \frac{60}{2} \frac{mL}{beat}/m2) = 50.5 \frac{mL}{beat}/m2$$
+
+$$MPAP = Mean Pulmonary Arterial Pressure (9 + \frac{17}{2} mmHg) = 13 mmHg$$
+
+$$*0.0144 is a conversion term to equalize units.$$
+
+$$Also: RVSWI = SI * (MPAP - CVP) * 0.0136;$$
+
+$$RVSWI = (CI / HR) * MPAP * 0.0144$$
+
+$$ Electrocardiography $$
+
+$$Q-T interval correction$$
+
+$$Q-Tc$$
+
+$$(QT)/(sqrt(RR))$$
+
+$$Q-Tc = Q-T interval correction (0.34 + \frac{0.42}{2} s) = 0.38 s$$
+
+$$QT = QT interval (0.34 + \frac{0.42}{2} s) = 0.38 s$$
+
+$$RR = RR interval (0.42 + \frac{1.2}{2} s) = 0.81 s$$
+
+$$*Bazett's equation. Q-T = 40% of R-R interval.$$
+
+$$Cerebrospinal Fluid$$
+
+$$Immunoglobulin G index$$
+
+$$IgGI$$
+
+$$(IgG * alb) / (IgG * alb)$$
+
+$$IgGI = Immunoglobulin G index (0 + \frac{0.65}{2} undefined) = 0.325$$
+
+$$IgG = Immunoglobulin G (1 + \frac{4}{2} CSF, undefined) = 2.5 CSF$$
+
+$$Alb = Albumin (3.5 + \frac{5.5}{2} \frac{g}{dL}) = 4.5 \frac{g}{dL}$$
+
+$$IgG = Immunoglobulin G (800 + \frac{1500}{2} undefined) = 1150$$
+
+$$Albumin (11.2 + \frac{37.5}{2} CSF, undefined) = 24.35 CSF$$
+
+$$*Albumin in serum is multiplied by 10 (\frac{g}{L}).$$
+
+$$IgG in serum is divided by 100 (\frac{g}{L}) to equalize units.$$
+
+$$Nutrition$$
+
+$$Ideal Body Weight$$
+
+$$IBW$$
+
+$$(Ht2) * 23$$
+
+$$IBW = Ideal Body Weight (110 + \frac{220}{2} kg) = 165 kg$$
+
+$$Ht = Body Height (60 + \frac{80}{2} m) = 70 m$$
+
+$$Sex = Gender (Male or Female)$$
+
+$$Units adjust dividing cm by 100 (to obtain meters).$$
+
+$$% of Ideal Body Weight$$
+
+$$%IBW$$
+
+$$(Wt * 100) / IBW$$
+
+$$IBW = Ideal Body Weight (110 + \frac{220}{2} kg) = 165 kg$$
+
+$$%IBW = % of Ideal Body Weight (90 + \frac{110}{2} fraction) = 100%$$
+
+$$BW xsdef = \frac{Excess}{deficit} of Body Weight (-15.4 + \frac{15.4}{2} kg) = 0 kg$$
+
+$$Wt = Body Weight (110 + \frac{220}{2} kg) = 165 kg$$
+
+$$Ht = Body Height (60 + \frac{80}{2} m) = 70 m$$
+
+$$Sex = Gender (Male or Female)$$
+
+$$Units adjust dividing cm by 100 (to obtain meters).$$
+
+$$\frac{Excess}{deficit} of Body Weight$$
+
+$$BW xsdef$$
+
+$$Wt - IBW$$
+
+$$IBW = Ideal Body Weight (110 + \frac{220}{2} kg) = 165 kg$$
+
+$$%IBW = % of Ideal Body Weight (90 + \frac{110}{2} fraction) = 100%$$
+
+$$BW xsdef = \frac{Excess}{deficit} of Body Weight (-15.4 + \frac{15.4}{2} kg) = 0 kg$$
+
+$$Wt = Body Weight (110 + \frac{220}{2} kg) = 165 kg$$
+
+$$Ht = Body Height (60 + \frac{80}{2} m) = 70 m$$
+
+$$Sex = Gender (Male or Female)$$
+
+$$Units adjust dividing cm by 100 (to obtain meters).$$
+
+$$Target Body Weight BMI25$$
+
+$$T-BW-bmi25$$
+
+$$(Ht2) * 25$$
+
+$$T-BW-bmi25 = Target Body Weight BMI25 (110 + \frac{220}{2} kg) = 165 kg$$
+
+$$Ht = Body Height (60 + \frac{80}{2} m) = 70 m$$
+
+$$Units adjust dividing cm by 100 (to obtain meters).$$
+
+$$Target Body Weight BMI30$$
+
+$$T-BW-bmi30$$
+
+$$(Ht2) * 30$$
+
+$$T-BW-bmi30 = Target Body Weight BMI30 (110 + \frac{220}{2} kg) = 165 kg$$
+
+$$Ht = Body Height (60 + \frac{80}{2} m) = 70 m$$
+
+$$Units adjust dividing cm by 100 (to obtain meters).$$
+
+$$Adjusted Body Weight$$
+
+$$IBW_adj$$
+
+$$IBW + ((BW - IBW) * 0.25)$$
+
+$$IBW = Ideal Body Weight (110 + \frac{220}{2} kg) = 165 kg$$
+
+$$%IBW = % of Ideal Body Weight (90 + \frac{110}{2} fraction) = 100%$$
+
+$$IBW_adj = Adjusted Body Weight (125 + \frac{250}{2} kg) = 187.5 kg$$
+
+$$Wt = Body Weight (125 + \frac{250}{2} kg) = 187.5 kg$$
+
+$$Ht = Body Height (60 + \frac{80}{2} m) = 70 m$$
+
+$$Sex = Gender (Male or Female)$$
+
+$$IBW_adj is calculated only if BW is > 125% of IBW.$$
+
+$$Body Mass Index$$
+
+$$BMI$$
+
+$$Wt / Ht2$$
+
+$$BMI = Body Mass Index (18.5 + \frac{25}{2} kg*mÂ²) = 21.75 \frac{kg}{m}Â²$$
+
+$$BMI class = Overweight & Obesity Classification$$
+
+$$Wt = Body Weight (110 + \frac{220}{2} kg) = 165 kg$$
+
+$$Ht = Body Height (60 + \frac{80}{2} m) = 70 m$$
+
+$$The equation takes Wt in kg and Ht in m.$$
+
+$$Also: BMI = (weight, lb * 704) / (height, in)2$$
+
+$$Overweight & Obesity Classification$$
+
+$$BMI class$$
+
+$$NHLBI Classification$$
+
+$$Ht = Body Height (60 + \frac{80}{2} cm) = 70 cm$$
+
+$$Wt = Body Weight (110 + \frac{220}{2} kg) = 165 kg$$
+
+$$BMI = Body Mass Index (18.5 + \frac{25}{2} kg*mÂ²) = 21.75 \frac{kg}{m}Â²$$
+
+$$This is a reverse BMI calculator. Use it to calculate height from body weight and BMI.$$
+
+$$The equation takes Wt in kg and Ht in m.$$
+
+$$Also: BMI = (weight, lb * 704) / (height, in)2$$
+
+$$Body Mass Index (reverse, Ht)$$
+
+$$BMI rev_ht$$
+
+$$sqrt(Wt / BMI)$$
+
+$$Wt = Body Weight (110 + \frac{220}{2} kg) = 165 kg$$
+
+$$Ht = Body Height (60 + \frac{80}{2} cm) = 70 cm$$
+
+$$BMI = Body Mass Index (18.5 + \frac{25}{2} kg*mÂ²) = 21.75 \frac{kg}{m}Â²$$
+
+$$This is a reverse BMI calculator. Use it to calculate weight from body height and BMI.$$
+
+$$The equation takes Wt in kg and Ht in m.$$
+
+$$Also: BMI = (weight, lb * 704) / (height, in)2$$
+
+$$Body Mass Index (reverse, Wt)$$
+
+$$BMI rev_wt$$
+
+$$BMI * Ht2$$
+
+$$BW = Body Weight (110 + \frac{220}{2} kg) = 165 kg$$
+
+$$Ht = Body Height (110 + \frac{220}{2} cm) = 165 cm$$
+
+$$BMI = Body Mass Index (18.5 + \frac{25}{2} kg*mÂ²) = 21.75 \frac{kg}{m}Â²$$
+
+$$This is a reverse BMI calculator. Use it to calculate weight from body height and BMI.$$
+
+$$The equation takes Wt in kg and Ht in m.$$
+
+$$Also: BMI = (weight, lb * 704) / (height, in)2$$
+
+$$Body Fat Percentage$$
+
+$$BF%$$
+
+$$[86.010 Ã Log(waist - neck)] - [70.041 Ã Log(ht)] + 36.76$$
+
+$$BF% = Body Fat Percentage (0 + \frac{50}{2} %) = 25%$$
+
+$$BF = Body Fat (14 + \frac{56}{2} kg) = 35 kg$$
+
+$$LBW = Lean Body Weight (86 + \frac{198}{2} kg) = 142 kg$$
+
+$$Neck = Neck (9 + \frac{23}{2} in) = 16 in$$
+
+$$Waist = Waist (20 + \frac{35}{2} in) = 27.5 in$$
+
+$$Hip = Hip (25 + \frac{50}{2} in) = 37.5 in$$
+
+$$Wt = Body Weight (110 + \frac{220}{2} kg) = 165 kg$$
+
+$$Ht = Body Height (60 + \frac{80}{2} cm) = 70 cm$$
+
+$$Sex = Gender (Male or Female)$$
+
+$$Lean Body Mass$$
+
+$$LBM$$
+
+$$7.138 + (0.02908 * Cr)$$
+
+$$LBM = Lean Body Mass (44 + \frac{132}{2} kg) = 88 kg$$
+
+$$Cr = Creatinine (600 + \frac{1800}{2} U24h, mg) = 1200 mg$$
+
+$$Lean Body Weight$$
+
+$$LBW$$
+
+$$(1.1 * Wt) - (128 * (Wt2 / Ht2))$$
+
+$$LBW = Lean Body Weight (86 + \frac{198}{2} kg) = 142 kg$$
+
+$$Wt = Body Weight (110 + \frac{220}{2} kg) = 165 kg$$
+
+$$Ht = Body Height (60 + \frac{80}{2} cm) = 70 cm$$
+
+$$Sex = Gender (Male or Female)$$
+
+$$Body Surface Area$$
+
+$$BSA$$
+
+$$(Wt0.425) * (Ht0.725) * (0.007184)$$
+
+$$BSA = Body Surface Area (1.3 + \frac{2.5}{2} mÂ²) = 1.9 mÂ²$$
+
+$$Wt = Body Weight (110 + \frac{220}{2} kg) = 165 kg$$
+
+$$Ht = Body Height (60 + \frac{80}{2} cm) = 70 cm$$
+
+$$Energy$$
+
+$$Basal Energy Expenditure$$
+
+$$BEE$$
+
+$$655 + (9.6 * Wt) + (1.8 * Ht) - (4.7 * age)$$
+
+$$BEE = Basal Energy Expenditure (1200 + \frac{2500}{2} \frac{kcal}{d}) = 1850 \frac{kcal}{d}$$
+
+$$Age = Patient Age (0 + \frac{90}{2} years) = 45 years$$
+
+$$Sex = Gender (Male or Female)$$
+
+$$Wt = Body Weight (110 + \frac{220}{2} kg) = 165 kg$$
+
+$$Ht = Body Height (60 + \frac{80}{2} cm) = 70 cm$$
+
+$$*Harris Benedict Equation$$
+
+$$Harris Benedict Equation$$
+
+$$HBE$$
+
+$$655 + (9.6 * Wt) + (1.8 * Ht) - (4.7 * age)$$
+
+$$HBE = Harris Benedict Equation (1200 + \frac{2500}{2} \frac{kcal}{d}) = 1850 \frac{kcal}{d}$$
+
+$$Age = Patient Age (0 + \frac{90}{2} years) = 45 years$$
+
+$$Sex = Gender (Male or Female)$$
+
+$$Wt = Body Weight (110 + \frac{220}{2} kg) = 165 kg$$
+
+$$Ht = Body Height (60 + \frac{80}{2} cm) = 70 cm$$
+
+$$*Also called Basal Energy Expenditure$$
+
+$$Energy Expenditure$$
+
+$$EE$$
+
+$$CO * Hb * ((SaO2 - SvO2) / 100) * 95$$
+
+$$EE = Energy Expenditure (1200 + \frac{2500}{2} \frac{kcal}{d}) = 1850 \frac{kcal}{d}$$
+
+$$CO = Cardiac Output (4.25 + \frac{6.12}{2} \frac{L}{min}) = 5.19 \frac{L}{min}$$
+
+$$Hb = Hemoglobin (12 + \frac{18}{2} \frac{g}{dL}) = 15 \frac{g}{dL}$$
+
+$$SaO2 = Arterial Oxygen Saturation (96 + \frac{99}{2}%) = 97.5%$$
+
+$$SvO2 = Mixed Venous Oxygen Saturation (60 + \frac{80}{2}%) = 70%$$
+
+$$Total Energy Expenditure$$
+
+$$TEE$$
+
+$$BEE * AF * SF$$
+
+$$TEE = Total Energy Expenditure (1200 + \frac{4000}{2} \frac{kcal}{d}) = 2600 \frac{kcal}{d}$$
+
+$$Age = Patient Age (0 + \frac{90}{2} years) = 45 years$$
+
+$$Sex = Gender (Male or Female)$$
+
+$$Wt = Body Weight (110 + \frac{220}{2} kg) = 165 kg$$
+
+$$Ht = Body Height (60 + \frac{80}{2} cm) = 70 cm$$
+
+$$AF = Activity Factor (0.9 + \frac{1.1}{2} factor) = 1.0$$
+
+$$SF = Stress Factor (0.9 + \frac{1.1}{2} factor) = 1.0$$
+
+$$*Harris Benedict Equation$$
+
+$$Metabolic Rate$$
+
+$$MR$$
+
+$$VO2 * 4.83$$
+
+$$MR = Metabolic Rate (50 + \frac{200}{2} \frac{kcal}{h}) = 125 \frac{kcal}{h}$$
+
+$$VO2 = Oxygen Consumption (200 + \frac{280}{2} \frac{mL}{min}) = 240 \frac{mL}{min}$$
+
+$$Units adjust multiplying by 60 (60 \frac{min}{h}) and dividing by 1000 (\frac{L}{mL}).$$
+
+$$Basal Metabolic Rate$$
+
+$$BMR$$
+
+$$37 - ((age - 20) / 10)$$
+
+$$BMR = Basal Metabolic Rate (25 + \frac{100}{2} \frac{kcal}{m}Â²/h) = 62.5 \frac{kcal}{m}Â²/h$$
+
+$$Age = Patient Age (0 + \frac{90}{2} years) = 45 years$$
+
+$$Thermic Effect of Food$$
+
+$$TEF$$
+
+$$BMR * 0.1$$
+
+$$TEF = Thermic Effect of Food (2.5 + \frac{10}{2} \frac{kcal}{m}Â²/h) = 6.25 \frac{kcal}{m}Â²/h$$
+
+$$Age = Patient Age (0 + \frac{90}{2} years) = 45 years$$
+
+$$BMR = Basal Metabolic Rate (25 + \frac{100}{2} \frac{kcal}{m}Â²/h) = 62.5 \frac{kcal}{m}Â²/h$$
+
+$$ Calories $$
+
+$$Carbohydrates (caloric value)$$
+
+$$CHOkcal$$
+
+$$CHO * 4.0$$
+
+$$kcal = Calories (0 + \frac{50000}{2} kcal) = 25000 kcal$$
+
+$$CHO = Carbohydrates (0 + \frac{5000}{2} g) = 2500 g$$
+
+$$*1g of CHO generates 4.0 kcal (average).$$
+
+$$Lipids (caloric value)$$
+
+$$Lipkcal$$
+
+$$Lipids * 9.2$$
+
+$$kcal = Calories (0 + \frac{50000}{2} kcal) = 25000 kcal$$
+
+$$Lipids = Lipids (0 + \frac{5000}{2} g) = 2500 g$$
+
+$$*1g of lipids generates 9.2 kcal (average).$$
+
+$$Proteins (caloric value)$$
+
+$$Protkcal$$
+
+$$Proteins * 4.0$$
+
+$$kcal = Calories (0 + \frac{50000}{2} kcal) = 25000 kcal$$
+
+$$Proteins = Proteins (0 + \frac{5000}{2} g) = 2500 g$$
+
+$$*1g of proteins generates 4.0 kcal (average).$$
+
+$$Dextrose (caloric value)$$
+
+$$Dextkcal$$
+
+$$Dextrose * 3.4$$
+
+$$kcal = Calories (0 + \frac{50000}{2} kcal) = 25000 kcal$$
+
+$$Dextrose = Dextrose (0 + \frac{5000}{2} g) = 2500 g$$
+
+$$*1g of Dextrose generates 3.4 kcal.$$
+
+$$Ethanol (caloric value)$$
+
+$$EtOHkcal$$
+
+$$EtOH * 7.0$$
+
+$$kcal = Calories (0 + \frac{50000}{2} kcal) = 25000 kcal$$
+
+$$EtOH = Ethanol (0 + \frac{5000}{2} g) = 2500 g$$
+
+$$*1g of Ethanol generates 7.0 kcal.$$
+
+$$ Nitrogen $$
+
+$$Nitrogen Balance$$
+
+$$NB$$
+
+$$NB = Nitrogen Balance (0 + 20 / 2 g / d) = 10$$
+
+$$Protein intake = Nitrogen Balance (30 + 150 / 2 g / d) = 90$$
+
+$$UUN = Urea Nitrogen (6 + 17 / 2 g / d) = 11.5$$
+
+$$*UUN / 0.8 represents UUN + urinary non-urea N+.$$
+
+$$*2.5 is the sum of fecal + integumental nitrogen.$$
+
+$$Nitrogen Intake$$
+
+$$N+ intake$$
+
+$$N+ intake = Nitrogen Intake (0 + 25 / 2 g / d) = 12.5$$
+
+$$Protein intake = Nitrogen Intake (30 + 150 / 2 g / d) = 90$$
+
+$$*Nitrogen content in proteins = ~16%.$$
+
+$$*Nitrogen Equivalent (NE) = proteins x 0.16.$$
+
+$$Catabolic Index$$
+
+$$Cat_I$$
+
+$$Cat_I = Catabolic Index (-20 + 5 / 2 g / d) = -7.5$$
+
+$$Protein intake = Catabolic Index (30 + 150 / 2 g / d) = 90$$
+
+$$UUN = Urea Nitrogen (6 + 17 / 2 g / d) = 11.5$$
+
+$$*\frac{UUN}{0.8} represents UUN + urinary non-urea N+.$$
+
+$$*2.5 is the sum of fecal + integumental nitrogen.$$
+
+$$Total Urine Losses of Nitrogen$$
+
+$$TULN$$
+
+$$TULN = Total Urine Losses of Nitrogen (7.5 + 21.3 / 2 g) = 14.4$$
+
+$$UUN = Urea Nitrogen (400 + 1200 / 2 \frac{mg}{dL}) = 800$$
+
+$$U vol = Urine volume (600 + 2500 / 2 U24h, L) = 1550$$
+
+$$*UUN = ~80% of urinary nitrogen.$$
+
+$$(UUN \frac{mg}{dL} are multiplied by 10 to adjust units to \frac{mg}{L}).$$
+
+$$Protein Nitrogen Content$$
+
+$$PNC$$
+
+$$PNC = Protein Nitrogen Content (0 + 80 / 2 g / d) = 40$$
+
+$$Protein intake (30 + 150 / 2 g / d) = 90$$
+
+$$*Nitrogen content in proteins = ~16%.$$
+
+$$*Nitrogen Equivalent (NE) = proteins x 0.16.$$
+
+$$Creatinine excretion : Height ratio$$
+
+$$Cr:Ht$$
+
+$$\frac{Cr}{Ht} = Creatinine excretion : Height ratio (9.5 + 12 / 2 \frac{mg}{cm}) = 10.75$$
+
+$$Ht = Body Height (60 + 80 / 2 cm) = 70$$
+
+$$Cr = Creatinine (600 + 1800 / 2 U24h, mg) = 1200$$
+
+$$ Nutrition Assessment $$
+
+$$Daily Protein Requirements$$
+
+$$DPR$$
+
+$$DPR = Daily Protein Requirements (24 + 150 / 2 g) = 87$$
+
+$$Wt = Body Weight (110 + 220 / 2 kg) = 165$$
+
+$$Protein requirements (0.8 + 1 / 2 \frac{g}{kg}) = 0.9 \frac{g}{kg}$$
+
+$$Prognostic Nutritional Index$$
+
+$$PNI$$
+
+$$PNI = Prognostic Nutritional Index (0 + 40 / 2 %) = 20$$
+
+$$Alb = Albumin (3.5 + 5.5 / 2 \frac{g}{dL}) = 4.5$$
+
+$$TSF = Triceps Skinfold (5.0 + 30.0 / 2 cm) = 17.5$$
+
+$$Transferrin (2.2 + 4 / 2 \frac{g}{L}) = 3.1$$
+
+$$DHI = Delayed Hypersensitivity Index (anergy) = 1 (since anergy = 1)$$
+
+$$*anergy = 1, reactive = 2.$$
+
+$$Probability of Survival$$
+
+$$POS$$
+
+$$POS = Probability of Survival (50 + 100 / 2 %) = 75$$
+
+$$Alb = Albumin (3.5 + 5.5 / 2 \frac{g}{dL}) = 4.5$$
+
+$$DSH = Delayed Skin Hypersensitivity (anergy) = 1 (since anergy = 1)$$
+
+$$Sepsis = 1 (since no sepsis)$$
+
+$$Dx Ca = Diagnosis of Cancer = 1 (since no cancer)$$
+
+$$*anergy = 1, reactive = 2. *no sepsis = 1, sepsis = 2. *no cancer = 1, cancer = 2.$$
+
+$$ Anthrpometrics $$
+
+$$Midarm Muscle Circumference$$
+
+$$MMC$$
+
+$$MMC = Midarm Muscle Circumference (15.0 + 35.0 / 2 cm) = 25.0$$
+
+$$TSF = Triceps Skinfold (5.0 + 30.0 / 2 cm) = 17.5$$
+
+$$MAC = Mid upper arm circumference (15 + 60 / 2 cm) = 37.5$$
+
+$$Midarm Muscle Area$$
+
+$$MMA$$
+
+$$MMA = Midarm Muscle Area ((15.0 + 35.0 / 2 cm) - (5.0 + 30.0 / 2 cm))^2 / 4Pi = 48.87 cmÂ²$$
+
+$$TSF = Triceps Skinfold (5.0 + 30.0 / 2 cm) = 17.5$$
+
+$$MAC = Mid upper arm circumference (15.0 + 60.0 / 2 cm) = 37.5$$
+
+$$*Also: MMA = MA - MFA. MFA = MA - MMA. MA = MFA + MMA.$$
+
+$$Midarm Fat Area$$
+
+$$MFA$$
+
+$$MFA = Midarm Fat Area ((15.0 + 60.0 / 2 cm) * (5.0 + 30.0 / 2 cm)) / 2 - ((Pi * (5.0 + 30.0 / 2 cm)^2) / 4) = 122.02 cmÂ²$$
+
+$$TSF = Triceps Skinfold (5.0 + 30.0 / 2 cm) = 17.5$$
+
+$$MAC = Mid upper arm circumference (15.0 + 60.0 / 2 cm) = 37.5$$
+
+$$*Also: MMA = MA - MFA. MFA = MA - MMA. MA = MFA + MMA.$$
+
+$$Midarm Area$$
+
+$$MA$$
+
+$$MA = Midarm Area (Pi) * ((15.0 + 60.0 / 2 Pi)^2) = 1200.0 cmÂ²$$
+
+$$MAC = Mid upper arm circumference (15.0 + 60.0 / 2 cm) = 37.5$$
+
+$$*Also: MMA = MA - MFA. MFA = MA - MMA. MA = MFA + MMA.$$
+
+$$Body Fat Percentage$$
+
+$$BF%$$
+
+$$BF% = Body Fat Percentage [86.010 x Log(20 + 39)] - [70.041 x Log(60 + 80)] + 36.76 = 20.75 %$$
+
+$$BF = Body Fat (14 + 66 / 2 kg) = 40 kg$$
+
+$$LBW = Lean Body Weight (86 + 198 / 2 kg) = 142 kg$$
+
+$$Neck = Neck (9 + 22 / 2 in) = 15.5 in$$
+
+$$Waist = Waist (20 + 39 / 2 in) = 29.5 in$$
+
+$$Hip = Hip (20 + 45 / 2 in) = 32.5 in$$
+
+$$Wt = Body Weight (110 + 220 / 2 kg) = 165 kg$$
+
+$$Ht = Body Height (60 + 80 / 2 cm) = 70 cm$$
+
+$$Sex = Gender (Male or Female)$$
+
+$$ If Pregnancy (Female) $$
+
+$$ Expected Date of Delivery $$
+
+$$ EDD $$
+
+$$ LMP+280d + - 14d $$
+
+$$ EDD = Expected Date of Delivery ( $$
+
+$$ LMP = Last Menstrual Period . $$
+
+$$ (Sex = Gender (Female Only) $$
+
+$$ Normal Pregnancy: $$
+
+$$ 40 weeks \frac{plus}{minus} 2 weeks. $$
+
+$$ 280 days (266-294). $$
+
+$$ 10 Lunar months (9.5-10.5), (1 lunar month=28 days).)) $$
+
+$$ Pediatrics $$
+
+$$ ET Size estimation Cole $$
+
+$$ ET Cole $$
+
+$$ (\frac{age}{4})+4 $$
+
+$$ ET Cole = ET Size estimation Cole ( 4 + 7.75 / 2 mm ) = 5.875 $$
+
+$$ Age = Patient Age ( 0 + 90 / 2 years ) = 45 $$
+
+$$ Age must be within 0 to 15. $$
+
+$$ *Cole's formula. Size refers to internal diameter. $$
+
+$$ ET Size estimation 2 $$
+
+$$ ETsize2 $$
+
+$$ (16+age)/4 $$
+
+$$ ETsize2 = ET Size estimation 2 ( 4 + 7.75 / 2 mm ) = 5.875 $$
+
+$$ Age = Patient Age ( 0 + 90 / 2 years ) = 45 $$
+
+$$ Age must be within 0 to 15. $$
+
+$$ *Cole's formula. Size refers to internal diameter. $$
+
+$$ Endotracheal tube estimation $$
+
+$$ ETT_e $$
+
+$$ \frac{postConceptAge}{10} $$
+
+$$ ETT_e = Endotracheal tube estimation (0+\frac{4.2}{2} mm) = 2.1 $$
+
+$$ Post-conceptual age (0+\frac{42}{2} weeks) = 21 $$
+
+$$ Size refers to internal diameter. $$
+
+$$ *Equation for newborns. $$
+
+$$ Distance for Insertion $$
+
+$$ D4Ins $$
+
+$$ (\frac{age}{2})+12 $$
+
+$$ D4Ins = Distance for Insertion (12+\frac{19.5}{2} undefined) = 15.75 $$
+
+$$ Age = Patient Age (0+\frac{90}{2} years) = 45 $$
+
+$$ *appropriate distance for insertion of endotracheal tube. (> 2 years old). $$
+
+$$ Systolic Blood Pressure, pediatric $$
+
+$$ SBPped $$
+
+$$ 90+(2*age) $$
+
+$$ SBPped = Systolic Blood Pressure, pediatric (92+\frac{120}{2} undefined) = 106 $$
+
+$$ Age = Patient Age (1+\frac{15}{2} years) = 8 $$
+
+$$ * For children over 1 year of age (median SBP). $$
+
+$$ Endotracheal tube estimation $$
+
+$$ ETT_e $$
+
+$$ \frac{postConceptAge}{10} $$
+
+$$ ETT_e = Endotracheal tube estimation (0+\frac{4.2}{2} mm) = 2.1 $$
+
+$$ Post-conceptual age (0+\frac{42}{2} weeks) = 21 $$
+
+$$ Size refers to internal diameter. $$
+
+$$ *Equation for newborns. $$
+
+$$ Distance for Insertion $$
+
+$$ D4Ins $$
+
+$$ (\frac{age}{2})+12 $$
+
+$$ D4Ins = Distance for Insertion (12+\frac{19.5}{2} undefined) = 15.75 $$
+
+$$ Age = Patient Age (0+\frac{90}{2} years) = 45 $$
+
+$$ *appropriate distance for insertion of endotracheal tube. (> 2 years old). $$
+
+$$ Systolic Blood Pressure, pediatric $$
+
+$$ SBPped $$
+
+$$ 90+(2*age) $$
+
+$$ SBPped = Systolic Blood Pressure, pediatric (92+\frac{120}{2} undefined) = 106 $$
+
+$$ Age = Patient Age (1+\frac{15}{2} years) = 8 $$
+
+$$ * For children over 1 year of age (median SBP). $$
+
+$$ Urinary Water Losses $$
+
+$$ H2OlossU $$
+
+$$ \frac{60mL}{kg}/d $$
+
+$$ H2OlossU = Urinary Water Losses (300+\frac{1200}{2} undefined) = 750 $$
+
+$$ Wt = Body Weight (10+\frac{33}{2} kg) = 21.5 $$
+
+$$ Water loss (urine) (45+\frac{75}{2} \frac{mL}{kg}/day) = 60 $$
+
+$$ *avg= average. Substantial variation exists. $$
+
+$$ It is essential to assess patients individually. $$
+
+$$ Fecal Water Losses $$
+
+$$ H2OlossF $$
+
+$$ \frac{10mL}{kg}/d $$
+
+$$ H2OlossF = Fecal Water Losses (50+\frac{300}{2} undefined) = 175 $$
+
+$$ Wt = Body Weight (10+\frac{33}{2} kg) = 21.5 $$
+
+$$ Water loss (fecal) (5+\frac{15}{2} \frac{mL}{kg}/day) = 10 $$
+
+$$ *avg= average. Substantial variation exists. $$
+
+$$ It is essential to assess patients individually. $$
+
+$$ Insensible Water Losses $$
+
+$$ H2OlossI $$
+
+$$ \frac{30mL}{kg}/d $$
+
+$$ H2OlossI = Insensible Water Losses (150+\frac{600}{2} undefined) = 375 $$
+
+$$ Wt = Body Weight (10+\frac{33}{2} kg) = 21.5 $$
+
+$$ Water loss (insensible) (22.5+\frac{37.5}{2} \frac{mL}{kg}/day) = 30 $$
+
+$$ *avg= average. Substantial variation exists. $$
+
+$$ It is essential to assess patients individually. $$
+
+$$ Pulmonary $$
+
+$$ A-a Gradient $$
+
+$$ PA-aO2 $$
+
+$$ (((FIO2)*(PB-PH2O))-(\frac{PaCO2}{R}))-(PaO2) $$
+
+$$ PA-aO2 = A-a Gradient (5+\frac{25}{2} mmHg) = 15 $$
+
+$$ FIO2 = Fraction of inspired O2 (19+\frac{21}{2} fraction) = 20 $$
+
+$$ PB = Barometric Pressure (500+\frac{760}{2} mmHg) = 630 $$
+
+$$ PH2O = Water vapor (partial pressure) (47+\frac{47}{2} mmHg) = 47 $$
+
+$$ R = Respiratory Quotient (0.7+\frac{1.0}{2} fraction) = 0.85 $$
+
+$$ PaCO2 = arterial CO2 Tension (35+\frac{45}{2} mmHg) = 40 $$
+
+$$ PaO2 = arterial Oxygen Tension (80+\frac{100}{2} mmHg) = 90 $$
+
+$$ A-a Gradient, age-corrected $$
+
+$$ PA-aO2_c $$
+
+$$ 2.5+(0.25*age) $$
+
+$$ PA-aO2_c = A-a Gradient, age-corrected (5+\frac{25}{2} mmHg) = 15 $$
+
+$$ Age = Patient Age (0+\frac{90}{2} years) = 45 $$
+
+$$ Alveolar Oxygen Tension $$
+
+$$ PAO2 $$
+
+$$ ((FIO2)*(PB-PH2O))-(\frac{PaCO2}{R}) $$
+
+$$ PAO2 = Alveolar Oxygen Tension (95+\frac{105}{2} mmHg) = 100 $$
+
+$$ FIO2 = Fraction of inspired O2 (19+\frac{21}{2} fraction) = 20 $$
+
+$$ PB = Barometric Pressure (500+\frac{760}{2} mmHg) = 630 $$
+
+$$ PH2O = Water vapor (partial pressure) (47+\frac{47}{2} mmHg) = 47 $$
+
+$$ R = Respiratory Quotient (0.7+\frac{1.0}{2} fraction) = 0.85 $$
+
+$$ PaCO2 = arterial CO2 Tension (35+\frac{45}{2} mmHg) = 40 $$
+
+$$ arterial Oxygen Tension (estimated) $$
+
+$$ PaO2_e $$
+
+$$ 100-(0.33*age) $$
+
+$$ PaO2_e = arterial Oxygen Tension (estimated) (80+\frac{100}{2} mmHg) = 90 $$
+
+$$ Age = Patient Age (0+\frac{90}{2} years) = 45 $$
+
+$$ arterial Oxygen Tension (estimated) $$
+
+$$ PaO2 (pos) $$
+
+$$ 103.5-(0.42*age) | 104.2-(0.42*age) $$
+
+$$ PaO2 (pos) = arterial Oxygen Tension (estimated) (80+\frac{100}{2} mmHg) = 90 $$
+
+$$ Age = Patient Age (0+\frac{90}{2} years) = 45 $$
+
+$$ Position (Sitting or Supine) $$
+
+$$ arterial O2 \frac{tension}{Fraction} of inspired O2 Ratio $$
+
+$$ \frac{PaO2}{FiO2} $$
+
+$$ (\frac{PaO2}{FIO2}) $$
+
+$$ \frac{PaO2}{FiO2} = arterial O2 \frac{tension}{Fraction} of inspired O2 Ratio (ratio (381+\frac{526}{2} mmHg:%)) = 453.5 $$
+
+$$ PaO2 = arterial Oxygen Tension (80+\frac{100}{2} mmHg) = 90 $$
+
+$$ FIO2 = Fraction of inspired O2 (19+\frac{21}{2} fraction) = 20 $$
+
+$$ Inspired Oxygen Tension $$
+
+$$ PIO2 $$
+
+$$ (FIO2)*(PB-PH2O) $$
+
+$$ PIO2 = Inspired Oxygen Tension (100+\frac{150}{2} mmHg) = 125 $$
+
+$$ FIO2 = Fraction of inspired O2 (19+\frac{21}{2} fraction) = 20 $$
+
+$$ PB = Barometric Pressure (500+\frac{760}{2} mmHg) = 630 $$
+
+$$ PH2O = Water vapor (partial pressure) (47+\frac{47}{2} mmHg) = 47 $$
+
+$$ Barometric Pressure $$
+
+$$ PB $$
+
+$$ 29.92*(((1)-(6.87535*alt*10^-6))^5.2561) $$
+
+$$ PB = Barometric Pressure (0+\frac{760}{2} mmHg) = 380 $$
+
+$$ Hc = Altitude (0+\frac{50000}{2} ft) = 25000 $$
+
+$$ Barometric Pressure (PB) is expressed in mmHg (torr). $$
+
+$$ The Altitude of your city is requested by NASA and is automated with the Analysis. $$
+
+$$ The formula is designed so that PB output results can't be Ã¢â¬ÅGreater ThanÃ¢â¬Â > 760. The system doesn't analyze the input of a negative number or degree (for altitude). $$
+
+$$ The formula presented here follows the Ã¢â¬ÅEquation of StateÃ¢â¬Â and the 1956 U.S. standard assumption. On August 23, 1945 in document AN-T-81, the Army-Navy published the equation that relates air pressure to altitude. That equation follows: $$
+
+$$ Pa = Po ( 1 - 6.87535*10-6Hc )5.2561 $$
+
+$$ where Pa is the air pressure at altitude Hc at a given sea level pressure Po. Sea level pressure assumed to be 29.92 inches of mercury (760mmHg). $$
+
+$$ Oxygen Content $$
+
+$$ arterial Oxygen Content $$
+
+$$ CaO2 $$
+
+$$ ((Hb*1.36)*(SaO2))+(PaO2*0.0031) $$
+
+$$ CaO2 = arterial Oxygen Content (17+\frac{20}{2} \frac{mL}{dL}) = 18.5 $$
+
+$$ Hb = Hemoglobin (12+\frac{18}{2} \frac{g}{dL}) = 15 $$
+
+$$ SaO2 = arterial Oxygen Saturation (96+\frac{99}{2} %) = 97.5 $$
+
+$$ PaO2 = arterial Oxygen Tension (80+\frac{100}{2} mmHg) = 90 $$
+
+$$ *1g of Hb binds 1.36mL of O2. $$
+
+$$ capillary Oxygen Content $$
+
+$$ CcO2 $$
+
+$$ ((Hb*1.36)*(ScO2))+(PaO2*0.0031) $$
+
+$$ CcO2 = capillary Oxygen Content (21+\frac{21}{2} \frac{mL}{dL}) = 21 $$
+
+$$ Hb = Hemoglobin (12+\frac{18}{2} \frac{g}{dL}) = 15 $$
+
+$$ ScO2 = capillary Oxygen Saturation (100+\frac{100}{2} %) = 100 $$
+
+$$ PaO2 = arterial Oxygen Tension (80+\frac{100}{2} mmHg) = 90 $$
+
+$$ *1g of Hb binds 1.36mL of O2. ScO2 assumed 100% $$
+
+$$ mixed venous Oxygen Content $$
+
+$$ CvO2 $$
+
+$$ ((Hb*1.36)*(SvO2))+(PvO2*0.0031) $$
+
+$$ CvO2 = mixed venous Oxygen Content (12+\frac{15}{2} \frac{mL}{dL}) = 13.5 $$
+
+$$ Hb = Hemoglobin (12+\frac{18}{2} \frac{g}{dL}) = 15 $$
+
+$$ SvO2 = mixed venous Oxygen Saturation (60+\frac{80}{2} %) = 70 $$
+
+$$ PvO2 = mixed venous Oxygen Tension (35+\frac{45}{2} mmHg) = 40 $$
+
+$$ *1g of Hb binds 1.36mL of O2. $$
+
+$$ Oxygen Content Difference, arterial-venous $$
+
+$$ Ca-vO2 $$
+
+$$ (((Hb*1.36)*(SaO2))+(PaO2*0.0031)) - (((Hb*1.36)*(SvO2))+(PvO2*0.0031)) $$
+
+$$ Ca-vO2 = Oxygen Content Difference, arterial-venous (4+\frac{5}{2} \frac{mL}{dL}) = 4.5 $$
+
+$$ Hb = Hemoglobin (12+\frac{18}{2} \frac{g}{dL}) = 15 $$
+
+$$ SaO2 = arterial Oxygen Saturation (96+\frac{99}{2} %) = 97.5 $$
+
+$$ PaO2 = arterial Oxygen Tension (80+\frac{100}{2} mmHg) = 90 $$
+
+$$ SvO2 = mixed venous Oxygen Saturation (60+\frac{80}{2} %) = 70 $$
+
+$$ PvO2 = mixed venous Oxygen Tension (35+\frac{45}{2} mmHg) = 40 $$
+
+$$ *1g of Hb binds 1.36mL of O2. $$
+
+$$ Oxygen Content Difference, arterial-venous (2) $$
+
+$$ Ca-vO2 $$
+
+$$ (CaO2)-(CvO2) $$
+
+$$ Ca-vO2 = Oxygen Content Difference, arterial-venous (2) (4+\frac{5}{2} \frac{mL}{dL}) = 4.5 $$
+
+$$ CaO2 = arterial Oxygen Content (17+\frac{20}{2} \frac{mL}{dL}) = 18.5 $$
+
+$$ CvO2 = mixed venous Oxygen Content (12+\frac{15}{2} \frac{mL}{dL}) = 13.5 $$
+
+$$ Oxygen Capacity $$
+
+$$ O2 cap $$
+
+$$ Hb*Hb_bc $$
+
+$$ O2 cap = Oxygen Capacity (16+\frac{24.1}{2} mL \frac{O2}{dL}) = 20.05 $$
+
+$$ Hb = Hemoglobin (12+\frac{18}{2} \frac{g}{dL}) = 15 $$
+
+$$ Hb_bc = Hemoglobin binding capacity (1.34+\frac{1.36}{2} mL \frac{O2}{g} Hb) = 1.35 $$
+
+$$ *1g of Hb binds 1.36mL of O2. $$
+
+$$ Shunt, physiologic $$
+
+$$ \frac{Qs}{Qt} $$
+
+$$ ((CcO2-CaO2)/(CcO2-CvO2))*(100) $$
+
+$$ \frac{Qs}{Qt} = Shunt, physiologic (0+\frac{7}{2} %) = 3.5 $$
+
+$$ CaO2 = arterial Oxygen Content (17+\frac{20}{2} \frac{mL}{dL}) = 18.5 $$
+
+$$ CvO2 = mixed venous Oxygen Content (12+\frac{15}{2} \frac{mL}{dL}) = 13.5 $$
+
+$$ CcO2 = capillary Oxygen Content (21+\frac{21}{2} \frac{mL}{dL}) = 21 $$
+
+$$ Oxygen Delivery Consumption $$
+
+$$ Respiratory Quotient $$
+
+$$ R $$
+
+$$ \frac{VCO2}{VO2} $$
+
+$$ R = Respiratory Quotient (0.7+\frac{1.0}{2} ratio) = 0.85 $$
+
+$$ VCO2 = Carbon Dioxide Output (150+\frac{320}{2} \frac{mL}{min}) = 235 $$
+
+$$ VO2 = Oxygen Consumption (200+\frac{280}{2} \frac{mL}{min}) = 240 $$
+
+$$ *R is also referred to as the respiratory exchange ratio. $$
+
+$$ Oxygen Extraction Rate $$
+
+$$ O2_ext $$
+
+$$ Ca-\frac{vO2}{CaO2} $$
+
+$$ O2_ext = Oxygen Extraction Rate (20+\frac{30}{2} fraction) = 25 $$
+
+$$ C(a-v)O2 = a-v Oxygen Content Difference (4.0+\frac{5.0}{2} \frac{mL}{dL}) = 4.5 $$
+
+$$ CaO2 = arterial Oxygen Content (17+\frac{20}{2} \frac{mL}{dL}) = 18.5 $$
+
+$$ Oxygen Delivery $$
+
+$$ DO2 $$
+
+$$ CO*CaO2*10 $$
+
+$$ DO2 = Oxygen Delivery (750+\frac{1200}{2} \frac{mL}{min}) = 975 $$
+
+$$ CO = Cardiac Output (4.25+\frac{6.12}{2} \frac{L}{min}) = 5.185 $$
+
+$$ CaO2 = arterial Oxygen Content (17+\frac{20}{2} \frac{mL}{dL}) = 18.5 $$
+
+$$ *Multiplying CaO2 (\frac{mL}{dL}) by 10 adjusts to \frac{mL}{L}. $$
+
+$$ Oxygen Delivery Index $$
+
+$$ DO2_I $$
+
+$$ CI*CaO2*10 $$
+
+$$ DO2_I = Oxygen Delivery Index (550+\frac{650}{2} \frac{mL}{min}/m2) = 600 $$
+
+$$ CI = Cardiac Index (2.5+\frac{3.6}{2} \frac{L}{min}/m2) = 3.05 $$
+
+$$ CaO2 = arterial Oxygen Content (17+\frac{20}{2} \frac{mL}{dL}) = 18.5 $$
+
+$$ *Multiplying CaO2 (\frac{mL}{dL}) by 10 adjusts to \frac{mL}{L}. $$
+
+$$ Oxygen Consumption $$
+
+$$ VO2 $$
+
+$$ CO*Ca-vO2 $$
+
+$$ VO2 = Oxygen Consumption (200+\frac{280}{2} \frac{mL}{min}) = 240 $$
+
+$$ CO = Cardiac Output (4.25+\frac{6.12}{2} \frac{L}{min}) = 5.185 $$
+
+$$ C(a-v)O2 = a-v Oxygen Content Difference (4.0+\frac{5.0}{2} \frac{mL}{dL}) = 4.5 $$
+
+$$ *Multiplying Ca-vO2 (\frac{mL}{dL}) by 10 adjusts to \frac{mL}{L}. $$
+
+$$ Oxygen Consumption Index $$
+
+$$ VO2_I $$
+
+$$ CI*Ca-vO2 $$
+
+$$ VO2_I = Oxygen Consumption Index (115+\frac{165}{2} \frac{mL}{min}/m2) = 140 $$
+
+$$ CI = Cardiac Index (2.5+\frac{3.6}{2} \frac{L}{min}/m2) = 3.05 $$
+
+$$ C(a-v)O2 = a-v Oxygen Content Difference (4.0+\frac{5.0}{2} \frac{mL}{dL}) = 4.5 $$
+
+$$ *Multiplying Ca-vO2 (\frac{mL}{dL}) by 10 adjusts to \frac{mL}{L}. $$
+
+$$ Carbon dioxide Production $$
+
+$$ VCO2 $$
+
+$$ Wt*VCO2 $$
+
+$$ VCO2 = Carbon dioxide Production (120+\frac{320}{2} \frac{mL}{min}) = 220 $$
+
+$$ Wt = Body Weight (110+\frac{220}{2} kg) = 165 $$
+
+$$ VCO2* = Carbon Dioxide Production (2.9+\frac{3.5}{2} \frac{mL}{kg}/min) = 3.2 $$
+
+$$ *VCO2 production ~ \frac{3.2mL}{kg}/min. $$
+
+$$ Oxygen Transport $$
+
+$$ Oxygen Transport:Red cell mass ratio $$
+
+$$ OTRCM $$
+
+$$ \frac{VO2I}{RCM} $$
+
+$$ OTRCM = Oxygen Transport:Red cell mass ratio (0.08+\frac{0.16}{2} ratio) = 0.12 $$
+
+$$ VO2_I = Oxygen Consumption index (115+\frac{165}{2} \frac{mL}{min}/m2) = 140 $$
+
+$$ RCM = Red Cell Mass (0.95+\frac{1.21}{2} \frac{mL}{m2}) = 1.08 $$
+
+$$ Oxygen Transport:Red cell flow ratio $$
+
+$$ OTRCF $$
+
+$$ \frac{VO2I}{RCFR} $$
+
+$$ OTRCF = Oxygen Transport:Red cell flow ratio (0.08+\frac{0.16}{2} ratio) = 0.12 $$
+
+$$ VO2_I = Oxygen Consumption index (115+\frac{165}{2} \frac{mL}{min}/m2) = 140 $$
+
+$$ RCFR = Red Cell Flow Rate (0.9+\frac{1.7}{2} \frac{mL}{min}/m2) = 1.3 $$
+
+$$ Tissue Oxygen Extraction Efficiency $$
+
+$$ TOEE $$
+
+$$ Ca-\frac{vO2}{RCM} $$
+
+$$ TOEE = Tissue Oxygen Extraction Efficiency (35+\frac{45}{2} ratio) = 40 $$
+
+$$ C(a-v)O2 = a-v Oxygen Content Difference (4.0+\frac{5.0}{2} \frac{mL}{dL}) = 4.5 $$
+
+$$ RCM = Red Cell Mass (0.95+\frac{1.21}{2} \frac{mL}{m2}) = 1.08 $$
+
+$$ *Multiplying Ca-vO2 (\frac{mL}{dL}) by 10 adjusts to \frac{mL}{L}. $$
+
+$$ Tissue Oxygen Extraction Index $$
+
+$$ TOEI $$
+
+$$ Ca-\frac{vO2}{RCFR} $$
+
+$$ TOEI = Tissue Oxygen Extraction Index (35+\frac{45}{2} ratio) = 40 $$
+
+$$ C(a-v)O2 = a-v Oxygen Content Difference (4.0+\frac{5.0}{2} \frac{mL}{dL}) = 4.5 $$
+
+$$ RCFR = Red Cell Flow Rate (0.9+\frac{1.7}{2} \frac{mL}{min}/m2) = 1.3 $$
+
+$$ *Multiplying Ca-vO2 (\frac{mL}{dL}) by 10 adjusts to \frac{mL}{L}. $$
+
+$$ Red Cell Flow Rate $$
+
+$$ RCFR $$
+
+$$ CI*Hct $$
+
+$$ RCFR = Red Cell Flow Rate (0.9+\frac{1.7}{2} \frac{L}{min}/m2) = 1.3 $$
+
+$$ CI = Cardiac Index (2.5+\frac{3.6}{2} \frac{L}{min}/m2) = 3.05 $$
+
+$$ Hct = Hematocrit (37+\frac{52}{2} fraction) = 44.5 $$
+
+$$ Lung Volumes $$
+
+$$ Total Lung Capacity $$
+
+$$ TLC $$
+
+$$ IRV+VT+ERV+RV $$
+
+$$ TLC = Total Lung Capacity (5.0+\frac{7.0}{2} L) = 6.0 $$
+
+$$ IRV = Inspiratory Reserve Volume (2.0+\frac{3.0}{2} L) = 2.5 $$
+
+$$ VT = Tidal Volume (0.4+\frac{0.6}{2} L) = 0.5 $$
+
+$$ ERV = Expiratory Reserve Volume (1.0+\frac{2.0}{2} L) = 1.5 $$
+
+$$ RV = Residual Volume (1.0+\frac{2.0}{2} L) = 1.5 $$
+
+$$ *TLC is the volume of air in the lungs at maximal inspiration. (Also, TLC= VC+RV). $$
+
+$$ Vital Capacity $$
+
+$$ VC $$
+
+$$ IRV+VT+ERV $$
+
+$$ VC = Vital Capacity (4.0+\frac{5.0}{2} L) = 4.5 $$
+
+$$ IRV = Inspiratory Reserve Volume (2.0+\frac{3.0}{2} L) = 2.5 $$
+
+$$ VT = Tidal Volume (0.4+\frac{0.6}{2} L) = 0.5 $$
+
+$$ ERV = Expiratory Reserve Volume (1.0+\frac{2.0}{2} L) = 1.5 $$
+
+$$ *VC is the maximum volume expelled by a forceful effort after maximal inspiration. (Also, VC= IC+ERV. VC= TLC-RV). $$
+
+$$ Residual Volume $$
+
+$$ RV $$
+
+$$ FRC-ERV $$
+
+$$ RV = Residual Volume (1.0+\frac{2.0}{2} L) = 1.5 $$
+
+$$ FRC = Functional Residual Capacity (2.0+\frac{4.0}{2} L) = 3.0 $$
+
+$$ ERV = Expiratory Reserve Volume (1.0+\frac{2.0}{2} L) = 1.5 $$
+
+$$ *RV is the volume that remains in the lungs after maximal expiration. (Also, RV= TLC-VC). $$
+
+$$ Inspiratory Capacity $$
+
+$$ IC $$
+
+$$ IRV+VT $$
+
+$$ IC = Inspiratory Capacity (1.0+\frac{4.0}{2} L) = 2.5 $$
+
+$$ IRV = Inspiratory Reserve Volume (2.0+\frac{3.0}{2} L) = 2.5 $$
+
+$$ VT = Tidal Volume (0.4+\frac{0.6}{2} L) = 0.5 $$
+
+$$ *IC is the maximum volume inspired from resting expiration. $$
+
+$$ Functional Residual Capacity $$
+
+$$ FRC $$
+
+$$ ERV+RV $$
+
+$$ FRC = Functional Residual Capacity (2.0+\frac{4.0}{2} L) = 3.0 $$
+
+$$ ERV = Expiratory Reserve Volume (1.0+\frac{2.0}{2L}) = 1.5 $$
+
+$$ RV = Residual Volume (1.0+\frac{2.0}{2} L) = 1.5 $$
+
+$$ *FRC is the volume remaining in the lungs after tidal volume (VT) is expired. $$
+
+$$ Tidal Volume $$
+
+$$ VT $$
+
+$$ Wt*VT $$
+
+$$ VT = Tidal Volume (400+\frac{600}{2} mL) = 500 $$
+
+$$ Wt = Body Weight (110+\frac{220}{2} kg) = 165 $$
+
+$$ VT = Tidal Volume (6+\frac{15}{2} \frac{mL}{kg}) = 10.5 $$
+
+$$ *VT is the volume of air \frac{inspired}{expired} with each breath. (Also, VT= IC-IRV. VT= VC-(IRV+ERV), VT= TLC-(IRV+ERV+RV). $$
+
+$$ Closing Capacity $$
+
+$$ CC $$
+
+$$ CV+RV $$
+
+$$ CC = Closing Capacity (1.3+\frac{2.5}{2} L) = 1.9 $$
+
+$$ CV = Closing Volume (0.3+\frac{0.5}{2} L) = 0.4 $$
+
+$$ RV = Residual Volume (1.0+\frac{2.0}{2} L) = 1.5 $$
+
+$$ *CC is the addition of closing volume + residual volume. $$
+
+$$ Dead Space $$
+
+$$ Dead Space (physiologic) $$
+
+$$ VD $$
+
+$$ (VT*(PaCO2-PECO2))/PaCO2 $$
+
+$$ VD = Dead Space (physiologic) (80+\frac{300}{2} mL) = 190 $$
+
+$$ VT = Tidal Volume (0.4+\frac{0.6}{2} mL) = 0.5 $$
+
+$$ PaCO2 = arterial CO2 Tension (35+\frac{45}{2} mmHg) = 40 $$
+
+$$ PECO2 = Expired CO2 Tension (25+\frac{35}{2} mmHg) = 30 $$
+
+$$ *VD is ~ 1 mL per lb of Body Wt. $$
+
+$$ Bohr equation $$
+
+$$ Bohr $$
+
+$$ (PACO2-PECO2)/PACO2 $$
+
+$$ VD:VT = Dead Space / Tidal Volume Ratio (25+\frac{35}{2} fraction) = 30 $$
+
+$$ PACO2 = Alveolar CO2 Tension (35+\frac{45}{2} mmHg) = 40 $$
+
+$$ PECO2 = Expired CO2 Tension (25+\frac{35}{2} mmHg) = 30 $$
+
+$$ *PACO2 = PaCO2. $$
+
+$$ Dead Space / Tidal Volume Ratio $$
+
+$$ VD:VT $$
+
+$$ (PaCO2-PECO2)/PaCO2 $$
+
+$$ VD:VT = Dead Space / Tidal Volume Ratio (25+\frac{35}{2} %) = 30 $$
+
+$$ PaCO2 = arterial CO2 Tension (35+\frac{45}{2} mmHg) = 40 $$
+
+$$ PECO2 = Expired CO2 Tension (25+\frac{35}{2} mmHg) = 30 $$
+
+$$ *PACO2 = PaCO2. $$
+
+$$ Ventilation $$
+
+$$ Minute Ventilation $$
+
+$$ VE $$
+
+$$ VT*RR $$
+
+$$ VE = Minute Ventilation (4.0+\frac{8.0}{2} \frac{L}{min} ) = 6.0 $$
+
+$$ VT = Tidal Volume (0.4+\frac{0.6}{2} L) = 0.5 $$
+
+$$ RR = Respiratory Rate (10+\frac{16}{2} \frac{resp}{min}) = 13 $$
+
+$$ *VE is the total flow exhaled per minute. $$
+
+$$ VE = VA + VD (all flows). $$
+
+$$ Alveolar Ventilation $$
+
+$$ VA $$
+
+$$ (VCO2*0.863)/PaCO2 $$
+
+$$ VA = Alveolar Ventilation (3.0+5.0 \frac{L}{min}) = 4.0 $$
+
+$$ VCO2 = Carbon Dioxide Output (150+\frac{320}{2} \frac{mL}{min}) = 235 $$
+
+$$ PaCO2 = arterial CO2 Tension (35+\frac{45}{2} mmHg) = 40 $$
+
+$$ *VA is the total gas that reaches gas exchange units per minute. $$
+
+$$ VA = VE - VD (all flows). $$
+
+$$ Dead Space Ventilation $$
+
+$$ VD $$
+
+$$ (VE*(PaCO2-PECO2))/PaCO2 $$
+
+$$ VD = Dead Space Ventilation (1.0+\frac{3.0}{2} \frac{L}{min}) = 2.0 $$
+
+$$ VE = Minute Ventilation (4.0+\frac{8.0}{2} \frac{L}{min}) = 6.0 $$
+
+$$ PaCO2 = arterial CO2 Tension (35+\frac{45}{2} mmHg) = 40 $$
+
+$$ PECO2 = Expired CO2 Tension (25+\frac{35}{2} mmHg) = 30 $$
+
+$$ *VD is the total volume that ventilates the airways, non-perfused lung units, and the ventilation tubing. $$
+
+$$ Peak Expiratory Flow Rate (estimated) $$
+
+$$ PEFR est $$
+
+$$ (((ht*5.48)+1.58)-(age*0.041))*60 $$
+
+$$ PEFR est = Peak Expiratory Flow Rate (estimated) (178+\frac{750}{2} \frac{L}{min}) = 464 $$
+
+$$ Age = Patient Age (0+\frac{90}{2} years) = 45 $$
+
+$$ Ht = Body Height (60+\frac{80}{2} cm) = 70 $$
+
+$$ The equations take Height in m (conversion is built in). $$
+
+$$ Forced Expiratory Volume 1s (predicted) $$
+
+$$ FEV1, predicted $$
+
+$$ 4.30*ht - 0.029*age - 2.49 $$
+
+$$ FEV1, predicted = Forced Expiratory Volume 1s (predicted) (1.56+\frac{5.5}{2} L) = 3.53 $$
+
+$$ Age = Patient Age (0+\frac{90}{2} years) = 45 $$
+
+$$ Ht = Body Height (60+\frac{80}{2} cm) = 70 $$
+
+$$ The equations take Height in m (conversion is built in). $$
+
+$$ Forced Expiratory Volume 1s (% of predicted) $$
+
+$$ FEV1, % pred $$
+
+$$ FEV1 \frac{measured}{FEV1} predicted $$
+
+$$ FEV1, predicted = Forced Expiratory Volume 1s (predicted) (1.56+\frac{5.5}{2} L) = 3.53 $$
+
+$$ FEV1, % pred = Forced Expiratory Volume 1s (% of predicted) (80+\frac{120}{2} %) = 100 $$
+
+$$ FEV1 = Forced Expiratory Volume 1s (measured) (1.56+\frac{5.5}{2} L) = 3.53 $$
+
+$$ Forced Vital Capacity (predicted) $$
+
+$$ FVC, predicted $$
+
+$$ 5.76*ht - 0.026*age - 4.34 $$
+
+$$ FVC, predicted = Forced Vital Capacity (predicted) (1.91+\frac{6.6}{2} L) = 4.26 $$
+
+$$ Age = Patient Age (0+\frac{90}{2} years) = 45 $$
+
+$$ Ht = Body Height (60+\frac{80}{2} cm) = 70 $$
+
+$$ Forced Expiratory Volume \frac{1s}{Forced} Vital Capacity $$
+
+$$ \frac{FEV1}{FVC} $$
+
+$$ \frac{FEV1}{FVC} $$
+
+$$ \frac{FEV1}{FVC} = Forced Expiratory Volume \frac{1s}{Forced} Vital Capacity (70+\frac{120}{2} %) = 95 $$
+
+$$ FEV1 = Forced Expiratory Volume 1s (measured) (1.56+\frac{5.5}{2} L) = 3.53 $$
+
+$$ FVC = Forced Vital Capacity (1.91+\frac{6.6}{2} L) = 4.26 $$
+
+$$ Both are measured values. $$
+
+$$ Compliance $$
+
+$$ Static Compliance $$
+
+$$ Cst $$
+
+$$ Specific Compliance $$
+
+$$ Csp $$
+
+$$ Dynamic Compliance $$
+
+$$ Cdyn $$
+
+$$ Airway Resistance $$
+
+$$ Raw $$
+
+$$ Renal Clearances $$
+
+$$ Glomerular Filtration Rate (Cockcroft) $$
+
+$$ GFR_cg $$
+
+$$ ((140-age)*Wt)/(72*Cr) $$
+
+$$ GFR_cg = Glomerular Filtration Rate (Cockcroft) (90+\frac{131}{2} \frac{mL}{min}) = 110.5 $$
+
+$$ Age = Patient Age (0+\frac{90}{2} years) = 45 $$
+
+$$ Sex = Gender (Male or Female) $$
+
+$$ Wt = Body Weight (110+\frac{220}{2} kg) = 165 $$
+
+$$ Cr = Creatinine (0.5+\frac{1.5}{2} \frac{mg}{dL}) = 1.0 $$
+
+$$ *Cockcroft Equation. $$
+
+$$ (Female value= multiply result by 0.85). $$
+
+$$ Creatinine, calculated (Cockcroft) $$
+
+$$ Cr_cg $$
+
+$$ ((140-age)*Wt)/(72*GFR) $$
+
+$$ Cr_cg = Creatinine, calculated (Cockcroft) (0.5+\frac{1.5}{2} \frac{mg}{dL}) = 1.0 $$
+
+$$ Age = Patient Age (0+\frac{90}{2} years) = 45 $$
+
+$$ Sex = Gender (Male or Female) $$
+
+$$ Wt = Body Weight (110+\frac{220}{2} kg) = 165 $$
+
+$$ GFR = Glomerular Filtration Rate (90+\frac{131}{2} \frac{mL}{min}) = 110.5 $$
+
+$$ *Cockcroft Equation. $$
+
+$$ Female value= GFR input is multiplied by 1.1765 $$
+
+$$ Glomerular Filtration Rate (MDRD-4) $$
+
+$$ GFR_mdrd4 $$
+
+$$ (186.3)*(Cr^-1.154)*(age^-0.203)*(GNF)*(ETF) $$
+
+$$ GFR_mdrd4 = Glomerular Filtration Rate (MDRD-4) (90+\frac{131}{2} \frac{mL}{min}) = 110.5 $$
+
+$$ Age = Patient Age (0+\frac{90}{2} years) = 45 $$
+
+$$ Sex = Gender (Male or Female) $$
+
+$$ Cr = Creatinine (0.5+\frac{1.5}{2} \frac{mg}{dL}) = 1.0 $$
+
+$$ *MDRD Equation (4 inputs, simplified), also Levey equation. $$
+
+$$ GNF = gender factor (Male = 1.0; Female = 0.742). $$
+
+$$ ETF = ethnicity factor (White, non-black = 1.0; Black race = 1.212). $$
+
+$$ Glomerular Filtration Rate (MDRD-6) $$
+
+$$ GFR_mdrd6 $$
+
+$$ (170)*(Cr^-0.999)*(age^-0.176)*(GNF)*(ETF)*(SUN^-0.17)*(alb^0.318) $$
+
+$$ GFR_mdrd6 = Glomerular Filtration Rate (MDRD-6) (90+\frac{131}{2} \frac{mL}{min}) = 110.5 $$
+
+$$ Age = Patient Age (0+\frac{90}{2} years) = 45 $$
+
+$$ Sex = Gender (Male or Female) $$
+
+$$ Cr = Creatinine (0.5+\frac{1.5}{2} \frac{mg}{dL}) = 1.0 $$
+
+$$ BUN = Blood Urea Nitrogen (10+\frac{20}{2} \frac{mg}{dL}) = 15 $$
+
+$$ Alb = Albumin (3.5+\frac{5.5}{2} \frac{g}{dL}) = 4.5 $$
+
+$$ *MDRD Equation (6 inputs), also Levey equation. $$
+
+$$ GNF = gender factor (Male = 1.0; Female = 0.762). $$
+
+$$ ETF = ethnicity factor (White, non-black = 1.0; Black race = 1.18). $$
+
+$$ Glomerular Filtration Rate (MDRD-4-IDMS) $$
+
+$$ GFR_mdrd4S $$
+
+$$ (175)*(Cr^-1.154)*(age^-0.203)*(GNF)*(ETF) $$
+
+$$ GFR_mdrd4S = Glomerular Filtration Rate (MDRD-4-IDMS) (90+\frac{131}{2} \frac{mL}{min}) = 110.5 $$
+
+$$ Age = Patient Age (0+\frac{90}{2} years) = 45 $$
+
+$$ Sex = Gender (Male or Female) $$
+
+$$ Cr = Creatinine (0.5+\frac{1.5}{2} \frac{mg}{dL}) = 1.0 $$
+
+$$ *MDRD Equation with Standardized Creatinine (4 inputs, simplified) (calibrated to an assay traceable to isotope-dilution mass spectrometry -IDMS), also Levey equation. $$
+
+$$ GNF = gender factor (Male = 1.0; Female = 0.742). $$
+
+$$ ETF = ethnicity factor (White, non-black = 1.0; Black race = 1.212). $$
+
+$$ Glomerular Filtration Rate (GFR_EPI) $$
+
+$$ GFR_EPI $$
+
+$$ (141)*min(\frac{Cr}{k}, 1)^a *max(\frac{Cr}{k}, 1)^-1.209 * (0.993^age)* 1.018 (if female) * 1.159 (if black) $$
+
+$$ GFR_EPI = Glomerular Filtration Rate (GFR_EPI) (90+\frac{131}{2} \frac{mL}{min}) = 110.5 $$
+
+$$ Age = Patient Age (0+\frac{90}{2} years) = 45 $$
+
+$$ Sex = Gender (Male or Female) $$
+
+$$ Cr = Creatinine (0.5+\frac{1.5}{2} \frac{mg}{dL}) = 1.0 $$
+
+$$ *GFR_EPI: Equation (Chronic Kidney Disease Epidemiology Collaboration equation.). $$
+
+$$ Variable k is 0.7 for females and 0.9 for males. Variable a is -0.329 for females, -0.411 for males. $$
+
+$$ GNF = gender factor (Male = 1.0; Female = 1.018). $$
+
+$$ ETF = ethnicity factor (White, non-black = 1.0; Black race = 1.159). $$
+
+$$ (min indicates the minimum and max indicates the maximum). $$
+
+$$ Glomerular Filtration Rate (GFR_EPI creatinine) $$
+
+$$ GFR_EPI cr $$
+
+$$ (141)*min(\frac{Cr}{k}, 1)^a *max(\frac{Cr}{k}, 1)^-1.209 * (0.993^age)* 1.018 (if female) * 1.159 (if black) $$
+
+$$ GFR_EPI cr = Glomerular Filtration Rate (GFR_EPI creatinine) (90+\frac{131}{2} \frac{mL}{min}) = 110.5 $$
+
+$$ Age = Patient Age (0+\frac{90}{2} years) = 45 $$
+
+$$ Sex = Gender (Male or Female) $$
+
+$$ Cr = Creatinine (0.5+\frac{1.5}{2} \frac{mg}{dL}) = 1.0 $$
+
+$$ *GFR_EPI cr: Equation (Chronic Kidney Disease Epidemiology Collaboration equation.). $$
+
+$$ Variable k is 0.7 for females and 0.9 for males. Variable a is -0.329 for females, -0.411 for males. $$
+
+$$ GNF = gender factor (Male = 1.0; Female = 1.018). $$
+
+$$ ETF = ethnicity factor (White, non-black = 1.0; Black race = 1.159). $$
+
+$$ (min indicates the minimum and max indicates the maximum). $$
+
+$$ Glomerular Filtration Rate (GFR_EPI cystatin C) $$
+
+$$ GFR_EPI cys $$
+
+$$ (133)*min(\frac{CysC}{0.8}, 1)^-0.499 *max(\frac{CysC}{0.8}, 1)^-1.328 * (0.996^age)* 0.932 (if female) $$
+
+$$ GFR_EPI cys = Glomerular Filtration Rate (GFR_EPI cystatin C) (90+\frac{131}{2} \frac{mL}{min}) = 110.5 $$
+
+$$ Age = Patient Age (0+\frac{90}{2} years) = 45 $$
+
+$$ Sex = Gender (Male or Female) $$
+
+$$ Cys C = Cystatin C (0.57+\frac{1.52}{2} \frac{mg}{L}) = 1.045 $$
+
+$$ *GFR_EPI cys: Equation (Chronic Kidney Disease Epidemiology Collaboration equation.). $$
+
+$$ GNF = gender factor (Male = 1.0; Female = 0.932). $$
+
+$$ (min indicates the minimum and max indicates the maximum). $$
+
+$$ Glomerular Filtration Rate (GFR_EPI creatinine - cystatin) $$
+
+$$ GFR_EPI cr-cys $$
+
+$$ 135 * min(\frac{SCr}{k}, 1)^a * max(\frac{SCr}{k}, 1)^-0.601 * min(\frac{SCysC}{0.8}, 1)^-0.375 * max(\frac{SCysC}{0.8}, 1)^-0.711 * 0.995^Age x 0.969 [if female] x 1.08 [if black] $$
+
+$$ GFR_EPI cr-cys = Glomerular Filtration Rate (GFR_EPI creatinine - cystatin) (90+\frac{131}{2} \frac{mL}{min}) = 110.5 $$
+
+$$ GFR in KDIGO = GFR categories in CKD (KDIGO) $$
+
+$$ GFR_EPI cr = Glomerular Filtration Rate (GFR_EPI creatinine) (90+\frac{131}{2} \frac{mL}{min}) = 110.5 $$
+
+$$ GFR_EPI cys = Glomerular Filtration Rate (GFR_EPI cystatin C) (90+\frac{131}{2} \frac{mL}{min}) = 110.5 $$
+
+$$ Age = Patient Age (0+\frac{90}{2} years) = 45 $$
+
+$$ Sex = Gender (Male or Female) $$
+
+$$ Cr = Creatinine (0.5+\frac{1.5}{2} \frac{mg}{dL}) = 1.0 $$
+
+$$ Cys C = Cystatin C (0.57+\frac{1.52}{2} \frac{mg}{L}) = 1.045 $$
+
+$$ *GFR_EPI cr-cys: Equation (Chronic Kidney Disease Epidemiology Collaboration equation.). $$
+
+$$ Variable k is 0.7 for females and 0.9 for males. Variable a is -0.248 for females, -0.207 for males. $$
+
+$$ GNF = gender factor (Male = 1.0; Female = 0.969). $$
+
+$$ ETF = ethnicity factor (White, non-black = 1.0; Black race = 1.08). $$
+
+$$ (min indicates the minimum and max indicates the maximum). $$
+
+$$ Albumin : Creatinine Ratio $$
+
+$$ ACR $$
+
+$$ \frac{Alb}{Cr} $$
+
+$$ ACR = Albumin : Creatinine Ratio (0+\frac{30}{2} \frac{mg}{g}) = 15 $$
+
+$$ AER = Albumin Excretion Rate (0+\frac{30}{2} \frac{mg}{d}) = 15 $$
+
+$$ Alb = Albumin (0.0+\frac{3.0}{2} \frac{mg}{dL}) = 1.5 $$
+
+$$ Cr = Creatinine (40+\frac{120}{2} \frac{mg}{dL}) = 80 $$
+
+$$ The equation takes albumin in \frac{mg}{dL} and creatinine in \frac{g}{dL}. $$
+
+$$ The normal urine ACR in young adults is <10 \frac{mg}{g} (<1 \frac{mg}{mmol}). $$
+
+$$ ACR in \frac{mg}{g} approximates Albumin excretion in \frac{mg}{24h}. $$
+
+$$ ACR <10 \frac{mg}{g} (<1 \frac{mg}{mmol}) is considered normal. $$
+
+$$ ACR 10-30 \frac{mg}{g} (1-3 \frac{mg}{mmol}) is considered high normal. $$
+
+$$ ACR >2200 \frac{mg}{g} (>220 \frac{mg}{mmol}) is considered nephrotic range. $$
+
+$$ The relationship between urine reagent strip results and other measures depends on urine concentration. $$
+
+$$ Protein : Creatinine Ratio $$
+
+$$ PCR $$
+
+$$ \frac{Prot}{Cr} $$
+
+$$ PCR = Protein : Creatinine Ratio (0+\frac{150}{2} \frac{mg}{g}) = 75 $$
+
+$$ PER = Protein Excretion Rate (0+\frac{150}{2} \frac{mg}{d}) = 75 $$
+
+$$ Prot = Protein (0+\frac{15}{2} \frac{mg}{dL}) = 7.5 $$
+
+$$ Cr = Creatinine (40+\frac{120}{2} \frac{mg}{dL}) = 80 $$
+
+$$ The equation takes protein in \frac{mg}{dL} and creatinine in \frac{g}{dL}. $$
+
+$$ The normal urine PCR in young adults is <50 \frac{mg}{g} (<5 \frac{mg}{mmol}). $$
+
+$$ PCR in \frac{mg}{g} approximates Protein excretion in \frac{mg}{24h}. $$
+
+$$ Creatinine, calculated (MDRD-6) $$
+
+$$ Cr_mdrd6 $$
+
+$$ (GFR/((170)*(age^-0.176)*(GNF)*(ETF)*(SUN^-0.17)*(Alb^0.318)))^ -1.001 $$
+
+$$ Cr_mdrd6 = Creatinine, calculated (MDRD-6) (0.5+\frac{1.5}{2} \frac{mg}{dL}) = 1.0 $$
+
+$$ Age = Patient Age (0+\frac{90}{2} years) = 45 $$
+
+$$ Sex = Gender (Male or Female) $$
+
+$$ BUN = Blood Urea Nitrogen (10+\frac{20}{2} \frac{mg}{dL}) = 15 $$
+
+$$ Alb = Albumin (3.5+\frac{5.5}{2} \frac{g}{dL}) = 4.5 $$
+
+$$ GFR = Glomerular Filtration Rate (90+\frac{131}{2} \frac{mL}{min}) = 110.5 $$
+
+$$ *MDRD Equation (6 inputs), also Levey equation. $$
+
+$$ GNF = gender factor (Male = 1.0; Female = 0.762). $$
+
+$$ ETF = ethnicity factor (White, non-black = 1.0; Black race = 1.18). $$
+
+$$ Target Creatinine GFR90 $$
+
+$$ T-Cr gfr90 $$
+
+$$ (90/((170)*(age^-0.176)*(GNF)*(ETF)*(SUN^-0.17)*(Alb^0.318)))^ -1.001 $$
+
+$$ T-Cr gfr90 = Target Creatinine GFR90 (0.5+\frac{1.5}{2} \frac{mg}{dL}) = 1.0 $$
+
+$$ Age = Patient Age (0+\frac{90}{2} years) = 45 $$
+
+$$ BUN = Blood Urea Nitrogen (10+\frac{20}{2} \frac{mg}{dL}) = 15 $$
+
+$$ Alb = Albumin (3.5+\frac{5.5}{2} \frac{g}{dL}) = 4.5 $$
+
+$$ *MDRD Equation (6 inputs), also Levey equation. $$
+
+$$ GNF = gender factor (Male = 1.0; Female = 0.762). $$
+
+$$ ETF = ethnicity factor (White, non-black = 1.0; Black race = 1.18). $$
+
+$$ Target Creatinine GFR60 $$
+
+$$ T-Cr gfr60 $$
+
+$$ (60/((170)*(age^-0.176)*(GNF)*(ETF)*(SUN^-0.17)*(Alb^0.318)))^ -1.001 $$
+
+$$ T-Cr gfr60 = Target Creatinine GFR60 (0.5+\frac{1.5}{2} \frac{mg}{dL}) = 1.0 $$
+
+$$ Age = Patient Age (0+\frac{90}{2} years) = 45 $$
+
+$$ BUN = Blood Urea Nitrogen (10+\frac{20}{2} \frac{mg}{dL}) = 15 $$
+
+$$ Alb = Albumin (3.5+\frac{5.5}{2} \frac{g}{dL}) = 4.5 $$
+
+$$ *MDRD Equation (6 inputs), also Levey equation. $$
+
+$$ GNF = gender factor (Male = 1.0; Female = 0.762). $$
+
+$$ ETF = ethnicity factor (White, non-black = 1.0; Black race = 1.18). $$
+
+$$ Target Creatinine GFR30 $$
+
+$$ T-Cr gfr30 $$
+
+$$ (30/((170)*(age^-0.176)*(GNF)*(ETF)*(SUN^-0.17)*(Alb^0.318)))^ -1.001 $$
+
+$$ T-Cr gfr30 = Target Creatinine GFR30 (0.5+\frac{1.5}{2} \frac{mg}{dL}) = 1.0 $$
+
+$$ Age = Patient Age (0+\frac{90}{2} years) = 45 $$
+
+$$ BUN = Blood Urea Nitrogen (10+\frac{20}{2} \frac{mg}{dL}) = 15 $$
+
+$$ Alb = Albumin (3.5+\frac{5.5}{2} \frac{g}{dL}) = 4.5 $$
+
+$$ *MDRD Equation (6 inputs), also Levey equation. $$
+
+$$ GNF = gender factor (Male = 1.0; Female = 0.762). $$
+
+$$ ETF = ethnicity factor (White, non-black = 1.0; Black race = 1.18). $$
+
+$$Target Creatinine GFR15$$
+
+$$T-Cr gfr15$$
+
+$$(15 / ((170) * (age^-0.176) * (GNF) * (ETF) * (SUN^-0.17) * (Alb^0.318)))^-1.001$$
+
+$$T-Cr gfr15 = Target Creatinine GFR15 (0.5+\frac{1.5}{2} \frac{mg}{dL}) = 1$$
+
+$$Age = Patient Age (0+\frac{90}{2} years) = 45$$
+
+$$Sex = Gender (Male)$$
+
+$$BUN = Blood Urea Nitrogen (10+\frac{20}{2} \frac{mg}{dL}) = 15$$
+
+$$Alb = Albumin (3.5+\frac{5.5}{2} \frac{g}{dL}) = 4.5$$
+
+$$*MDRD Equation (6 inputs), also Levey equation.$$
+
+$$GNF = gender factor (Male = 1.0; Female = 0.762).$$
+
+$$ETF = ethnicity factor (White, non-black = 1.0; Black race = 1.18).$$
+
+$$Glomerular Filtration Rate (Mawer)$$
+
+$$GFR_mwr$$
+
+$$(LBW * (29.3 - (0.203 * age)) * (1 - (0.03 * Cr))) / (Cr * 14.4)$$
+
+$$LBW = Lean Body Weight (86+\frac{198}{2} kg) = 142$$
+
+$$GFR_mwr = Glomerular Filtration Rate (Mawer) (90+\frac{131}{2} \frac{mL}{min}) = 110.5$$
+
+$$Age = Patient Age (0+\frac{90}{2} years) = 45$$
+
+$$Sex = Gender (Male or Female)$$
+
+$$Wt = Body Weight (110+\frac{220}{2} kg) = 165$$
+
+$$Ht = Body Height (60+\frac{80}{2} cm) = 70$$
+
+$$Cr = Creatinine (0.5+\frac{1.5}{2} \frac{mg}{dL}) = 1$$
+
+$$Creatinine Clearance$$
+
+$$Cl Cr$$
+
+$$(CrU * volume) / CrS$$
+
+$$Cl Cr = Creatinine Clearance (90+\frac{131}{2} \frac{mL}{min}) = 110.5$$
+
+$$Cr = Creatinine (40+\frac{120}{2} \frac{mg}{dL}) = 80$$
+
+$$vol = Volume (0.4+\frac{1.7}{2} \frac{mL}{min}) = 1.05$$
+
+$$Cr = Creatinine (0.5+\frac{1.5}{2} \frac{mg}{dL}) = 1$$
+
+$$ Creatinine Excretion $$
+
+$$ Cr ex $$
+
+$$ CrU*Uvolume $$
+
+$$ Cr ex = Creatinine Excretion (0.24+\frac{3}{2} \frac{g}{d}) = 1.62 $$
+
+$$ Cr = Creatinine (40+\frac{120}{2} \frac{mg}{dL}) = 80 $$
+
+$$ vol = Volume (0.4+\frac{1.7}{2} \frac{mL}{min}) = 1.05 $$
+
+$$ Filtration Fraction $$
+
+$$ FF $$
+
+$$ \frac{GFR}{RPF} $$
+
+$$ FF = Filtration Fraction (17+\frac{23}{2} %) = 20 $$
+
+$$ GFR = Glomerular Filtration Rate (90+\frac{131}{2} \frac{mL}{min}) = 110.5 $$
+
+$$ RPF = Renal Plasma Flow (500+\frac{1350}{2} \frac{mL}{min}) = 925 $$
+
+$$ Free Water Clearance $$
+
+$$ Cl_H2O $$
+
+$$ Uvol-Closm $$
+
+$$ Cl_H2O = Free Water Clearance (25+\frac{100}{2} \frac{mL}{h}) = 62.5 $$
+
+$$ vol = Volume (0.4+\frac{1.7}{2} \frac{mL}{min}) = 1.05 $$
+
+$$ Cl osm = Osmolar Clearance (60+\frac{180}{2} \frac{mL}{h}) = 120 $$
+
+$$ Osmolar Clearance $$
+
+$$ Cl_osm $$
+
+$$ \frac{U}{Posm}*Uvol $$
+
+$$ Cl_osm = Osmolar Clearance (60+\frac{180}{2} \frac{mL}{h}) = 120 $$
+
+$$ vol = Volume (0.4+\frac{1.7}{2} \frac{mL}{min}) = 1.05 $$
+
+$$ osm = Osmolality (50+\frac{1400}{2} \frac{mOsm}{kg}) = 725 $$
+
+$$ osm = Osmolality (275+\frac{295}{2} \frac{mOsm}{kg}) = 285 $$
+
+$$ Urea Clearance $$
+
+$$ Cl_Urea $$
+
+$$ (UUN*Uvol)/BUN $$
+
+$$ Cl_Urea = Urea Clearance (64+\frac{99}{2} \frac{mL}{min}) = 81.5 $$
+
+$$ vol = Volume (0.4+\frac{1.7}{2} \frac{mL}{min}) = 1.05 $$
+
+$$ BUN = Blood Urea Nitrogen (10+\frac{20}{2} \frac{mg}{dL}) = 15 $$
+
+$$ UUN = Urine Urea Nitrogen (400+\frac{1200}{2} \frac{mg}{dL}) = 800 $$
+
+$$ Substance X Clearance $$
+
+$$ Cl_X $$
+
+$$ \frac{U}{P} X*Uvol $$
+
+$$ Cl_X = Substance X Clearance (0+\frac{1000}{2} \frac{mL}{min}) = 500 $$
+
+$$ vol = Volume (0.4+\frac{1.7}{2} \frac{mL}{min}) = 1.05 $$
+
+$$ Substance X (0+\frac{1000}{2} units x) = 500 $$
+
+$$ Substance X (0+\frac{1000}{2} units x) = 500 $$
+
+$$ Acid- Base $$
+
+$$ Anion Gap (Serum) $$
+
+$$ AG $$
+
+$$ Na-(Cl+HCO3) $$
+
+$$ AG = Anion Gap (Serum) (8+\frac{16}{2} \frac{mEq}{L}) = 12 $$
+
+$$ Na+ = Sodium (136+\frac{145}{2} \frac{mEq}{L}) = 140.5 $$
+
+$$ Cl- = Chloride (98+\frac{106}{2} \frac{mEq}{L}) = 102 $$
+
+$$ HCO3- = Bicarbonate (21+\frac{29}{2} \frac{mEq}{L}) = 25 $$
+
+$$ Anion Gap 4 (Serum) $$
+
+$$ AG4_S $$
+
+$$ (Na+K)-(Cl+HCO3) $$
+
+$$ AG4_S = Anion Gap 4 (Serum) (8+\frac{16}{2} \frac{mEq}{L}) = 12 $$
+
+$$ Na+ = Sodium (136+\frac{145}{2} \frac{mEq}{L}) = 140.5 $$
+
+$$ K+ = Potassium (3.5+\frac{5.5}{2} \frac{mEq}{L}) = 4.5 $$
+
+$$ Cl- = Chloride (98+\frac{106}{2} \frac{mEq}{L}) = 102 $$
+
+$$ HCO3- = Bicarbonate (21+\frac{29}{2} \frac{mEq}{L}) = 25 $$
+
+$$ Delta Delta $$
+
+$$ DD $$
+
+$$ (Delta AG)/(Delta HCO3) $$
+
+$$ AG = Anion Gap (Serum) (8+\frac{16}{2} \frac{mEq}{L}) = 12 $$
+
+$$ Delta AG = Delta Anion Gap (0+\frac{4}{2} \frac{mEq}{L}) = 2 $$
+
+$$ Delta HCO3 = Delta Bicarbonate (0+\frac{2}{2} \frac{mEq}{L}) = 1 $$
+
+$$ DD = Delta Delta (1+\frac{2}{2} ratio) = 1.5 $$
+
+$$ Na+ = Sodium (136+\frac{145}{2} \frac{mEq}{L}) = 140.5 $$
+
+$$ Cl- = Chloride (98+\frac{106}{2} \frac{mEq}{L}) = 102 $$
+
+$$ HCO3- = Bicarbonate (23+\frac{25}{2} \frac{mEq}{L}) = 24 $$
+
+$$ AG d = Anion Gap, desired (8+\frac{12}{2} \frac{mEq}{L}) = 10 $$
+
+$$ HCO3- d = HCO3, desired (21+\frac{29}{2} \frac{mEq}{L}) = 25 $$
+
+$$ Urine Anion Gap $$
+
+$$ UAG $$
+
+$$ (Na+K)-Cl $$
+
+$$ UAG = Urine Anion Gap (8+\frac{12}{2} \frac{mEq}{L}) = 10 $$
+
+$$ Na+ = Sodium (25+\frac{150}{2} \frac{mEq}{L}) = 87.5 $$
+
+$$ K+ = Potassium (25+\frac{100}{2} \frac{mEq}{L}) = 62.5 $$
+
+$$ Cl- = Chloride (110+\frac{250}{2} \frac{mEq}{L}) = 180 $$
+
+$$ Acid Deficit $$
+
+$$ H_def $$
+
+$$ Wt*0.5(HCO3m-HCO3d) $$
+
+$$ H_def = Acid Deficit (0 mEq) $$
+
+$$ Wt = Body Weight (110+\frac{220}{2} kg) = 165 $$
+
+$$ HCO3- VD = HCO3 Volume of Distribution (40+\frac{60}{2} %) = 50 $$
+
+$$ HCO3- m = HCO3, measured (21+\frac{29}{2} \frac{mEq}{L}) = 25 $$
+
+$$ HCO3- d = HCO3, desired (23+\frac{25}{2} \frac{mEq}{L}) = 24 $$
+
+$$ *HCO3 VD is usually 50% (0.5) of body Wt. $$
+
+$$ *HCO3 (S) desired = ~ 24. $$
+
+$$ *If HCO3 m < HCO3 d, result defaults to 0. $$
+
+$$ HCO3 VD (volume of distribution) is usually 50% of body weight (Although the space can be 100% under severe hypobicarbonatemia). $$
+
+$$ *H_def & HCO3_xs are identical equations $$
+
+$$ Bicarbonate Deficit $$
+
+$$ HCO3_def $$
+
+$$ Wt*0.5(HCO3d-HCO3m) $$
+
+$$ HCO3_def = Bicarbonate Deficit (0 mEq) $$
+
+$$ Wt = Body Weight (110+\frac{220}{2} kg) = 165 $$
+
+$$ HCO3- VD = HCO3 Volume of Distribution (40+\frac{60}{2} %) = 50 $$
+
+$$ HCO3- d = HCO3, desired (23+\frac{25}{2} \frac{mEq}{L}) = 24 $$
+
+$$ HCO3- m = HCO3, measured (21+\frac{29}{2} \frac{mEq}{L}) = 25 $$
+
+$$ *HCO3 VD is usually 50% (0.5) of body Wt. $$
+
+$$ *HCO3 (S) desired = ~ 24. $$
+
+$$ *If HCO3 d < HCO3 m, result defaults to 0. $$
+
+$$ HCO3 VD (volume of distribution) is usually 50% of body weight (Although the space can be 100% under severe hypobicarbonatemia). If pH is <7.1, a fraction of 80% could be used. $$
+
+$$ Bicarbonate Excess $$
+
+$$ HCO3_xs $$
+
+$$ Wt*0.5(HCO3m-HCO3d) $$
+
+$$ HCO3_xs = Bicarbonate Excess (0 mEq) $$
+
+$$ Wt = Body Weight (110+\frac{220}{2} kg) = 165 $$
+
+$$ HCO3- VD = HCO3 Volume of Distribution (40+\frac{60}{2} %) = 50 $$
+
+$$ HCO3- m = HCO3, measured (21+\frac{29}{2} \frac{mEq}{L}) = 25 $$
+
+$$ HCO3- d = HCO3, desired (23+\frac{25}{2} \frac{mEq}{L}) = 24 $$
+
+$$ *HCO3 VD is usually 50% (0.5) of body Wt. $$
+
+$$ *HCO3 (S) desired = ~ 24. $$
+
+$$ *If HCO3 m < HCO3 d, result defaults to 0. $$
+
+$$ HCO3 VD (volume of distribution) is usually 50% of body weight (Although the space can be 100% under severe hypobicarbonatemia). $$
+
+$$ *H_def & HCO3_xs are identical equations $$
+
+$$ Chloride Deficit $$
+
+$$ Cl_def $$
+
+$$ Wt*0.5(Cld-Clm) $$
+
+$$ Cl_def = Chloride Deficit (0 mEq) $$
+
+$$ Wt = Body Weight (110+\frac{220}{2} kg) = 165 $$
+
+$$ Cl VD = Cl Volume of Distribution (40+\frac{60}{2} %) = 50 $$
+
+$$ Cl d = Cl-, desired (98+\frac{106}{2} \frac{mEq}{L}) = 102 $$
+
+$$ Cl m = Cl-, measured (98+\frac{106}{2} \frac{mEq}{L}) = 102 $$
+
+$$ *Cl VD is usually 50% (0.5) of body Wt. $$
+
+$$ *Cl (S) desired = ~ 103. $$
+
+$$ *If Cl d < Cl m, result defaults to 0. $$
+
+$$ Henderson - Hasselbalch Equation $$
+
+$$ HHE $$
+
+$$ pk+log(HCO3/(PCO2*0.03)) $$
+
+$$ pH = potential Hydrogen (7.36+\frac{7.44}{2} pH units) = 7.4 $$
+
+$$ HCO3- = Bicarbonate (21+\frac{29}{2} \frac{mEq}{L}) = 25 $$
+
+$$ PaCO2 = CO2 tension (35+\frac{45}{2} mmHg) = 40 $$
+
+$$ *pK = 6.1 (for body fluids) $$
+
+$$ Hydrogen ion concentration (from pH) $$
+
+$$ [H+] $$
+
+$$ (7.8-pH)*100 $$
+
+$$ [H+] = Hydrogen ion concentration (from pH) (36+\frac{44}{2} nEq) = 40 $$
+
+$$ pH = potential Hydrogen (7.36+\frac{7.44}{2} pH units) = 7.4 $$
+
+$$ *pH value must be less than 7.8 $$
+
+$$ Hydrogen ion (Acid Base Equation) $$
+
+$$ H+ ion $$
+
+$$ (24*PaCO2)/HCO3 $$
+
+$$ H+ = Hydrogenion (36+\frac{44}{2} \frac{nEq}{L}) = 40 $$
+
+$$ PaCO2 = CO2 tension (35+\frac{45}{2} mmHg) = 40 $$
+
+$$ HCO3- = Bicarbonate (21+\frac{29}{2} \frac{mEq}{L}) = 25 $$
+
+$$ *Acid-Base equation is also known as the Kassirer-Bleich equation. $$
+
+$$ Kassirer-Bleich Equation $$
+
+$$ KBE $$
+
+$$ (24*PaCO2)/HCO3 $$
+
+$$ H+ = Hydrogenion (36+\frac{44}{2} \frac{nEq}{L}) = 40 $$
+
+$$ PaCO2 = CO2 tension (35+\frac{45}{2} mmHg) = 40 $$
+
+$$ HCO3- = Bicarbonate (21+\frac{29}{2} \frac{mEq}{L}) = 25 $$
+
+$$ *Acid-Base equation is also known as the Kassirer-Bleich equation. $$
+
+$$ Lactate Excess $$
+
+$$ L_xs $$
+
+$$ (Lpt-Lnl)-(PYRpt-PYRnl)*(\frac{Lnl}{PYRnl}) $$
+
+$$ L_xs = Lactate Excess (0 \frac{mg}{dL}) $$
+
+$$ Lactate, Pt (5+\frac{15}{2} \frac{mg}{dL}) = 10 $$
+
+$$ Lactate, nl (5+\frac{15}{2} \frac{mg}{dL}) = 10 $$
+
+$$ Pyruvate, Pt (0.5+\frac{1.5}{2} \frac{mg}{dL}) = 1 $$
+
+$$ Pyruvate, nl (0.5+\frac{1.5}{2} \frac{mg}{dL}) = 1 $$
+
+$$ Metabolic Acidosis (Winter) $$
+
+$$ MetAcid $$
+
+$$ 1.5*(HCO3)+8 (+-2) $$
+
+$$ PaCO2 exp = expected PaCO2 (35+\frac{45}{2} aB, mmHg) = 40 $$
+
+$$ HCO3- = Bicarbonate (21+\frac{29}{2} \frac{mEq}{L}) = 25 $$
+
+$$ Metabolic Alkalosis $$
+
+$$ MetAlk $$
+
+$$ 0.9(HCO3)+9 $$
+
+$$ PaCO2 exp = expected PaCO2 (35+\frac{45}{2} aB, mmHg) = 40 $$
+
+$$ HCO3- = Bicarbonate (21+\frac{29}{2} \frac{mEq}{L}) = 25 $$
+
+$$ Electrolytes $$
+
+$$ Fractional Excretion of Na+ $$
+
+$$ FENa $$
+
+$$ ((\frac{U}{P} Na)/(\frac{U}{P} Cr))*100 $$
+
+$$ FENa = Fractional Excretion of Na+ (0+\frac{1}{2} %) = 0.25 $$
+
+$$ Na+ = Sodium (S, \frac{mEq}{L}) $$
+
+$$ Na+ = Sodium (U, \frac{mEq}{L}) $$
+
+$$ Cr = Creatinine (S, \frac{mg}{dL}) $$
+
+$$ Cr = Creatinine (U, \frac{mg}{dL}) $$
+
+$$ Required Sodium $$
+
+$$ Na+_req $$
+
+$$ (125-Na)*0.6*Wt $$
+
+$$ Na+_req = Required Sodium (0 mEq) $$
+
+$$ Wt = Body Weight (110+\frac{220}{2} kg) = 165 kg $$
+
+$$ %H2O = H2O % of BW (50+\frac{70}{2} %) = 60 % $$
+
+$$ Na+ = Sodium (136+\frac{145}{2} \frac{mEq}{L}) = 140.5 \frac{mEq}{L} $$
+
+$$ *H2O % of BW (Na VD -volume of distribution-) is usually 60% (0.6) of BW. Although the % can be 70% in lean individuals or 50% in obese. $$
+
+$$ *If Na entered is >= 125, result defaults to 0. $$
+
+$$ Sodium Correction by glucose $$
+
+$$ Na+_c $$
+
+$$ Na+(0.016*(glucose-100)) $$
+
+$$ Na+_c = Sodium Correction by glucose (136+\frac{145}{2} \frac{mEq}{L}) = 140.5 \frac{mEq}{L} $$
+
+$$ Na+ = Sodium (136+\frac{145}{2} \frac{mEq}{L}) = 140.5 \frac{mEq}{L} $$
+
+$$ gluc = Glucose (75+\frac{115}{2} \frac{mg}{dL}) = 95 \frac{mg}{dL} $$
+
+$$ *If Glucose entered is < 100 \frac{mg}{dL} result will default to captured Na+. $$
+
+$$ Sodium level decreases 1.6 \frac{mEq}{L} per each 100 \frac{mg}{dL} increase in serum glucose. $$
+
+$$ Fractional Excretion of K+ $$
+
+$$ FEK+ $$
+
+$$ ((\frac{U}{P} K)/(\frac{U}{P} Cr))*100 $$
+
+$$ FEK+ = Fractional Excretion of K+ (4+\frac{16}{2} %) = 10 $$
+
+$$ K+ = Potassium S (3.5+\frac{5.5}{2} \frac{mEq}{L}) = 4.5 \frac{mEq}{L} $$
+
+$$ K+ = Potassium U (25+\frac{100}{2} \frac{mEq}{L}) = 62.5 \frac{mEq}{L} $$
+
+$$ Cr = Creatinine (0.5+\frac{1.5}{2} \frac{mg}{dL}) = 1 \frac{mg}{dL} $$
+
+$$ Cr = Creatinine (40+\frac{120}{2} \frac{mg}{dL}) = 80 \frac{mg}{dL} $$
+
+$$ TransTubular Potassium Gradient $$
+
+$$ TTKG $$
+
+$$ (\frac{U}{P} K)/(\frac{U}{P} Osm) $$
+
+$$ TTKG = TransTubular Potassium Gradient (4+\frac{6}{2} %) = 5 $$
+
+$$ K+ = Potassium S (3.5+\frac{5.5}{2} \frac{mEq}{L}) = 4.5 \frac{mEq}{L} $$
+
+$$ K+ = Potassium U (25+\frac{100}{2} \frac{mEq}{L}) = 62.5 \frac{mEq}{L} $$
+
+$$ osm = Osmolality S (275+\frac{295}{2} \frac{mOsm}{kg}) = 285 \frac{mOsm}{kg} $$
+
+$$ osm = Osmolality U (50+\frac{1400}{2} \frac{mOsm}{kg}) = 725 \frac{mOsm}{kg} $$
+
+$$ Urine Potassium, corrected $$
+
+$$ KU_c $$
+
+$$ K U/(\frac{U}{P} Osm) $$
+
+$$ KU_c = Urine Potassium, corrected (25+\frac{100}{2} \frac{mEq}{L}) = 62.5 \frac{mEq}{L} $$
+
+$$ K+ = Potassium (25+\frac{100}{2} \frac{mEq}{L}) = 62.5 \frac{mEq}{L} $$
+
+$$ osm = Osmolality S (275+\frac{295}{2} \frac{mOsm}{kg}) = 285 \frac{mOsm}{kg} $$
+
+$$ osm = Osmolality U (50+\frac{1400}{2} \frac{mOsm}{kg}) = 725 \frac{mOsm}{kg} $$
+
+$$ *K+U_c is also called: [K+ CCD], or the Potassium concentration on the cortical collecting duct. $$
+
+$$ Total Body Potassium $$
+
+$$ TBK+ $$
+
+$$ 55*Wt $$
+
+$$ TBK+ = Total Body Potassium (2000+\frac{5500}{2} mEq) = 3750 mEq $$
+
+$$ Wt = Body Weight (110+\frac{220}{2} kg) = 165 kg $$
+
+$$ *TBK is calculated from the average potassium per kg of body Wt (~55 mmol of K+/kg). $$
+
+$$ Potassium (correction by pH) $$
+
+$$ K+_c (pH) $$
+
+$$ K+ - (0.6*((pHinit-pHfnl)/0.1)) $$
+
+$$ K+ corr = K+, corrected (S, \frac{mEq}{L}) $$
+
+$$ K+ = Potassium (3.5+\frac{5.5}{2} \frac{mEq}{L}) = 4.5 \frac{mEq}{L} $$
+
+$$ pH, initial (7.36+\frac{7.44}{2} pH units) = 7.40 $$
+
+$$ pH, final (7.36+\frac{7.44}{2} pH units) = 7.40 $$
+
+$$ *K+ increases 0.6 \frac{mmol}{L} for each 0.1 pH units decrease (and vice versa). $$
+
+$$ Fractional Excretion of Phosphate $$
+
+$$ FEPi $$
+
+$$ ((\frac{U}{P} Pi)/(\frac{U}{P} Cr))*100 $$
+
+$$ FEPi = Fractional Excretion of Phosphate (10+\frac{20}{2} %) = 15 % $$
+
+$$ PO4- = Phosphate S (1+\frac{1.45}{2} \frac{mEq}{L}) = 1.23 \frac{mEq}{L} $$
+
+$$ PO4- = Phosphate U (13+\frac{28}{2} \frac{mEq}{L}) = 20.5 \frac{mEq}{L} $$
+
+$$ Cr = Creatinine S (0.5+\frac{1.5}{2} \frac{mg}{dL}) = 1 \frac{mg}{dL} $$
+
+$$ Cr = Creatinine U (40+\frac{120}{2} \frac{mg}{dL}) = 80 \frac{mg}{dL} $$
+
+$$ Tubular Reabsorption of Phosphate $$
+
+$$ TRP $$
+
+$$ (1-((\frac{U}{P} Pi)/(\frac{U}{P} Cr)))*100 $$
+
+$$ TRP = Tubular Reabsorption of Phosphate (82+\frac{95}{2} %) = 88.5 % $$
+
+$$ PO4- = Phosphate S (1+\frac{1.45}{2} \frac{mEq}{L}) = 1.23 \frac{mEq}{L} $$
+
+$$ PO4- = Phosphate U (13+\frac{28}{2} \frac{mEq}{L}) = 20.5 \frac{mEq}{L} $$
+
+$$ Cr = Creatinine S (0.5+\frac{1.5}{2} \frac{mg}{dL}) = 1 \frac{mg}{dL} $$
+
+$$ Cr = Creatinine U (40+\frac{120}{2} \frac{mg}{dL}) = 80 \frac{mg}{dL} $$
+
+$$ *TRP is also calculated as (1 - (\frac{FEPi}{100})) x 100. $$
+
+$$ Body Water $$
+
+$$ Body Water Deficit $$
+
+$$ H2O_def $$
+
+$$ %H2O * Wt * ((Na / 140) - 1) $$
+
+$$ H2O_def = Body Water Deficit (0 L) $$
+
+$$ Wt = Body Weight (110 + \frac{220}{2} kg) = 165 kg $$
+
+$$ %H2O = H2O % of BW (50 + \frac{70}{2} %) = 60% $$
+
+$$ Na+ = Sodium (136 + \frac{145}{2} \frac{mEq}{L}) = 140.5 \frac{mEq}{L} $$
+
+$$ *H2O % of BW (Na VD -volume of distribution-) is usually 60% (0.6) of BW. Although the % can be 70% in lean individuals or 50% in obese. $$
+
+$$ *If Na entered is < 140, result defaults to 0. $$
+
+$$ This formula is similar to the H2O excess one. $$
+
+$$ Free Water Excess $$
+
+$$ H2O_xs $$
+
+$$ %H2O * Wt * (1 - (Na / 140)) $$
+
+$$ H2O_xs = Free Water Excess (0 L) $$
+
+$$ Wt = Body Weight (110 + \frac{220}{2} kg) = 165 kg $$
+
+$$ %H2O = H2O % of BW (50 + \frac{70}{2} %) = 60% $$
+
+$$ Na+ = Sodium (136 + \frac{145}{2} \frac{mEq}{L}) = 140.5 \frac{mEq}{L} $$
+
+$$ *H2O % of BW (Na VD -volume of distribution-) is usually 60% (0.6) of BW. Although the % can be 70% in lean individuals or 50% in obese. $$
+
+$$ *If Na entered is > 140, result defaults to 0. $$
+
+$$ This formula is similar to the H2O deficit one. $$
+
+$$ Total Body Water $$
+
+$$ TBW $$
+
+$$ %H2O * Wt $$
+
+$$ TBW = Total Body Water (18 + \frac{90}{2} L) = 54 L $$
+
+$$ Wt = Body Weight (110 + \frac{220}{2} kg) = 165 kg $$
+
+$$ %H2O = H2O % of BW (50 + \frac{70}{2} %) = 60% $$
+
+$$ Total Body Solute $$
+
+$$ TBS $$
+
+$$ %H2O * Wt * Osm $$
+
+$$ TBS = Total Body Solute (5000 + \frac{25000}{2} mOsmol) = 15000 mOsmol $$
+
+$$ Wt = Body Weight (110 + \frac{220}{2} kg) = 165 kg $$
+
+$$ %H2O = H2O % of BW (50 + \frac{70}{2} %) = 60% $$
+
+$$ Osm = Osmolality (285 + \frac{295}{2} \frac{mOsmol}{L}) = 290 \frac{mOsmol}{L} $$
+
+$$ Intracellular Fluid $$
+
+$$ ICF $$
+
+$$ %H2O * Wt * 0.666 $$
+
+$$ ICF = Intracellular Fluid (12 + \frac{60}{2} L) = 36 L $$
+
+$$ Wt = Body Weight (110 + \frac{220}{2} kg) = 165 kg $$
+
+$$ %H2O = H2O % of BW (50 + \frac{70}{2} %) = 60% $$
+
+$$ *ICF (\frac{2}{3} of TBW). *TBW = Wt x % of H2O. $$
+
+$$ Extracellular Fluid $$
+
+$$ ECF $$
+
+$$ %H2O * Wt * 0.333 $$
+
+$$ ECF = Extracellular Fluid (30 + \frac{60}{2} L) = 45 L $$
+
+$$ Wt = Body Weight (110 + \frac{220}{2} kg) = 165 kg $$
+
+$$ %H2O = H2O % of BW (50 + \frac{70}{2} %) = 60% $$
+
+$$ *ECF (\frac{1}{3} of TBW). *TBW = Wt x % of H2O. $$
+
+$$ Interstitial Fluid $$
+
+$$ IF $$
+
+$$ %H2O * Wt * 0.222 $$
+
+$$ IF = Interstitial Fluid (4 + \frac{20}{2} L) = 12 L $$
+
+$$ Wt = Body Weight (110 + \frac{220}{2} kg) = 165 kg $$
+
+$$ %H2O = H2O % of BW (50 + \frac{70}{2} %) = 60% $$
+
+$$ *IF (\frac{2}{3} of ECF). *TBW = Wt x % of H2O. $$
+
+$$ Intravascular Fluid $$
+
+$$ IV $$
+
+$$ %H2O * Wt * 0.111 $$
+
+$$ IV = Intravascular Fluid (2 + \frac{10}{2}) = 6 $$
+
+$$ Wt = Body Weight (110 + \frac{220}{2} kg) = 165 $$
+
+$$ %H2O = H2O % of BW (50 + \frac{70}{2} %) = 60 $$
+
+$$ *IV (\frac{1}{3} of Extracellular Fluid). $$
+
+$$ Plasma Volume $$
+
+$$ PV $$
+
+$$ %H2O * Wt * 0.074 $$
+
+$$ PV = Plasma Volume (1.2 + \frac{6}{2}) = 3.6 $$
+
+$$ Wt = Body Weight (110 + \frac{220}{2} kg) = 165 $$
+
+$$ %H2O = H2O % of BW (50 + \frac{70}{2} %) = 60 $$
+
+$$ *PV (\frac{2}{3} of Intravascular Fluid). $$
+
+$$ Blood Volume $$
+
+$$ BV $$
+
+$$ %H2O * Wt * 0.037 $$
+
+$$ BV = Blood Volume (0.8 + \frac{4}{2}) = 2.4 $$
+
+$$ Wt = Body Weight (110 + \frac{220}{2} kg) = 165 $$
+
+$$ %H2O = H2O % of BW (50 + \frac{70}{2} %) = 60 $$
+
+$$ *BV (\frac{1}{3} of Intravascular Fluid). $$
+
+$$ Osmolality $$
+
+$$ Osmolality, calculated $$
+
+$$ Osm calc $$
+
+$$ (2 * (Na + K)) + (gluc / 18) + (BUN / 2.8) $$
+
+$$ Osm calc = Osmolality, calculated (275 + \frac{295}{2}) = 285 $$
+
+$$ Na+ = Sodium (136 + \frac{145}{2} \frac{mEq}{L}) = 140.5 $$
+
+$$ K+ = Potassium (3.5 + \frac{5.5}{2} \frac{mEq}{L}) = 4.5 $$
+
+$$ gluc = Glucose (75 + \frac{115}{2} \frac{mg}{dL}) = 95 $$
+
+$$ BUN = Blood Urea Nitrogen (10 + \frac{20}{2} \frac{mg}{dL}) = 15 $$
+
+$$ Osmolar Gap $$
+
+$$ OsmGap $$
+
+$$ (Osm) - ((2 * (Na + K)) + (gluc / 18) + (BUN / 2.8)) $$
+
+$$ Osm calc = Osmolality, calculated (275 + \frac{295}{2}) = 285 $$
+
+$$ OsmGap = Osmolar Gap (0 + \frac{10}{2}) = 5 $$
+
+$$ Osm, m = Osmolality (measured) (285 + \frac{295}{2} \frac{mOsmol}{L}) = 290 $$
+
+$$ Na+ = Sodium (136 + \frac{145}{2} \frac{mEq}{L}) = 140.5 $$
+
+$$ K+ = Potassium (3.5 + \frac{5.5}{2} \frac{mEq}{L}) = 4.5 $$
+
+$$ gluc = Glucose (75 + \frac{115}{2} \frac{mg}{dL}) = 95 $$
+
+$$ BUN = Blood Urea Nitrogen (10 + \frac{20}{2} \frac{mg}{dL}) = 15 $$
+
+$$ *If calculated Osm is > measured Osm, Osm Gap result defaults to 0. $$
+
+$$ Osmolality, calculated (5) $$
+
+$$ Osm calc5 $$
+
+$$ (2 * (Na + K)) + (gluc / 18) + (BUN / 2.8) + (etoh / 4.6) $$
+
+$$ Osm calc = Osmolality, calculated (275 + \frac{295}{2}) = 285 $$
+
+$$ Na+ = Sodium (136 + \frac{145}{2} \frac{mEq}{L}) = 140.5 $$
+
+$$ K+ = Potassium (3.5 + \frac{5.5}{2} \frac{mEq}{L}) = 4.5 $$
+
+$$ gluc = Glucose (75 + \frac{115}{2} \frac{mg}{dL}) = 95 $$
+
+$$ BUN = Blood Urea Nitrogen (10 + \frac{20}{2} \frac{mg}{dL}) = 15 $$
+
+$$ Blood Alcohol Level (from Osm gap) $$
+
+$$ BAL (Blood Alcohol Level) refers to ethanol level. BAL is indirectly obtained by multiplying the osmolar gap by 4.6 (4.6 converts from ethanol in \frac{mmol}{L} to ethanol in \frac{mg}{dL}). Notice that this gap might be due to many other substances including --but not limited to-- methanol, ethylene glycol, etc. $$
+
+$$ BAL $$
+
+$$ ((Osm)-((2*(Na+K))+(\frac{gluc}{18})+(\frac{bun}{2.8})))*4.6 $$
+
+$$ Osm = (285 + \frac{295}{2}) = 290 $$
+
+$$ Na+ = (136 + \frac{145}{2}) = 140.5 $$
+
+$$ K+ = (3.5 + \frac{5.5}{2}) = 4.5 $$
+
+$$ Glu = (75 + \frac{115}{2}) = 95 $$
+
+$$ BUN = (10 + \frac{20}{2}) = 15 $$
+
+$$ OSM calc = (275 + \frac{295}{2}) = 285 $$
+
+$$ OSMgap = (0 + \frac{10}{2}) = 5 $$
+
+$$ Fractional Excretions $$
+
+$$ Fractional Excretion of Na+ $$
+
+$$ FENa $$
+
+$$ ((\frac{U}{P} Na) / (\frac{U}{P} Cr)) * 100 $$
+
+$$ FENa = Fractional Excretion of Na+ (0 + \frac{1}{2} %) = 0.5 $$
+
+$$ Na+ = Sodium (136 + \frac{145}{2} \frac{mEq}{L}) = 140.5 $$
+
+$$ Na+ = Sodium U (25 + \frac{150}{2} \frac{mEq}{L}) = 87.5 $$
+
+$$ Cr = Creatinine (0.5 + \frac{1.5}{2} \frac{mg}{dL}) = 1 $$
+
+$$ Cr = Creatinine U (40 + \frac{120}{2} \frac{mg}{dL}) = 80 $$
+
+$$ Fractional Excretion of K+ $$
+
+$$ FEK+ $$
+
+$$ ((\frac{U}{P} K) / (\frac{U}{P} Cr)) * 100 $$
+
+$$ FEK+ = Fractional Excretion of K+ (4 + \frac{16}{2} %) = 10 $$
+
+$$ K+ = Potassium S (3.5 + \frac{5.5}{2} \frac{mEq}{L}) = 4.5 $$
+
+$$ K+ = Potassium (25 + \frac{100}{2} \frac{mEq}{L}) = 62.5 $$
+
+$$ Cr = Creatinine S (0.5 + \frac{1.5}{2} \frac{mg}{dL}) = 1 $$
+
+$$ Cr = Creatinine U (40 + \frac{120}{2} \frac{mg}{dL}) = 80 $$
+
+$$ Fractional Excretion of Bicarbonate $$
+
+$$ FEHCO3 $$
+
+$$ ((\frac{U}{P} HCO3) / (\frac{U}{P} Cr)) * 100 $$
+
+$$ FEHCO3 = Fractional Excretion of Bicarbonate (0 + \frac{5}{2} %) = 2.5 $$
+
+$$ HCO3- = Bicarbonate S (21 + \frac{29}{2} \frac{mEq}{L}) = 25 $$
+
+$$ HCO3- = Bicarbonate U (0 + \frac{200}{2} \frac{mEq}{L}) = 100 $$
+
+$$ Cr = Creatinine (0.5 + \frac{1.5}{2} \frac{mg}{dL}) = 1 $$
+
+$$ Cr = Creatinine U (40 + \frac{120}{2} \frac{mg}{dL}) = 80 $$
+
+$$ Fractional Excretion of Urea $$
+
+$$ FE Urea $$
+
+$$ ((\frac{UUN}{BUN}) / (\frac{U}{P} Cr)) * 100 $$
+
+$$ FE Urea = Fractional Excretion of Urea (20 + \frac{70}{2} %) = 45 $$
+
+$$ BUN = Blood Urea Nitrogen (10 + \frac{20}{2} \frac{mg}{dL}) = 15 $$
+
+$$ UUN = Urine Urea Nitrogen (400 + \frac{1200}{2} \frac{mg}{dL}) = 800 $$
+
+$$ Cr = Creatinine S (0.5 + \frac{1.5}{2} \frac{mg}{dL}) = 1 $$
+
+$$ Cr = Creatinine U (40 + \frac{120}{2} \frac{mg}{dL}) = 80 $$
+
+$$ Fractional Excretion of Magnesium $$
+
+$$ FEMg $$
+
+$$ ((\frac{U}{P} Mg) / (\frac{U}{P} Cr)) * 100 $$
+
+$$ FE Mg = Fractional Excretion of Magnesium (0 + \frac{100}{2} %) = 50 $$
+
+$$ Substance X = (0 + \frac{1000}{2} units x) = 500 $$
+
+$$ Cr = Creatinine (0.5 + \frac{1.5}{2} \frac{mg}{dL}) = 1 $$
+
+$$ Cr = Creatinine U (40 + \frac{120}{2} \frac{mg}{dL}) = 80 $$
+
+$$ Fractional Excretion of Uric acid $$
+
+$$ FEUa $$
+
+$$ ((\frac{U}{P} uric ac) / (\frac{U}{P} Cr)) * 100 $$
+
+$$ CrU:CrS = Creatinine (U) : Creatinine (S) ratio (20 + \frac{40}{2} fraction) = 30 $$
+
+$$ Cr = Creatinine (0.5 + \frac{1.5}{2} \frac{mg}{dL}) = 1 $$
+
+$$ Cr = Creatinine U (40 + \frac{120}{2} \frac{mg}{dL}) = 80 $$
+
+$$ Renal Failure Index $$
+
+$$ RFI $$
+
+$$ (Na U) / (\frac{U}{P} Cr) $$
+
+$$ UUN:BUN = UUN : BUN ratio (3 + \frac{8}{2} fraction) = 5.5 $$
+
+$$ BUN = Blood Urea Nitrogen (10 + \frac{20}{2} \frac{mg}{dL}) = 15 $$
+
+$$ UUN = Urine Urea Nitrogen (400 + \frac{1200}{2} \frac{mg}{dL}) = 800 $$
+
+$$ Fractional Excretion of Substance X $$
+
+$$ FE X $$
+
+$$ ((\frac{U}{P} X) / (\frac{U}{P} Cr)) * 100 $$
+
+$$ UacU:CrU = Uric Acid (U) : Creatinine (U) ratio (0 + \frac{1}{2} fraction) = 0.5 $$
+
+$$ Uric acid = (17 + \frac{50}{2} \frac{mg}{dL}) = 33.5 $$
+
+$$ Cr = Creatinine (40 + \frac{120}{2} \frac{mg}{dL}) = 80 $$
+
+</div>	
 </body>
 
 </html>
